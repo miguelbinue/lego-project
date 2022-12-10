@@ -6,7 +6,7 @@
 
       <div class="header">
         <div class="header-description">
-          <h3 class="header-title">Log In</h3>
+          <h3 class="header-title">Log In to LEGO</h3>
           <p class="header-subtitle">Start organizing your tasks!</p>
         </div>
       </div>
@@ -18,7 +18,7 @@
             <input
               type="email"
               class="input-field sign"
-              placeholder="Your email"
+              placeholder="Email"
               id="email"
               v-model="email"
               required
@@ -29,7 +29,7 @@
             <input
               type="password"
               class="input-field sign"
-              placeholder="Your password"
+              placeholder="Password"
               id="password"
               v-model="password"
               required
