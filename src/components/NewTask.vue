@@ -1,17 +1,20 @@
 <template>
-    <h1 class="new-task-title">Nuevo reto!</h1>
-    <div v-if="showErrorMessage">
-        <p class="error-text">{{ errorMessage }}</p>
-    </div>
-    <div class="new-task-input">
-        <div class="input-field">
-            <input type="text" placeholder="Title" v-model="name">
+    <div id="newTask">
+        <h1 class="new-task-title">Nuevo reto!</h1>
+        <div v-if="showErrorMessage">
+            <p class="error-text">{{ errorMessage }}</p>
         </div>
-        <div class="input-field">
-            <input type="text" placeholder="Description" v-model="description">
+        <div class="new-task-input">
+            <div class="input-field">
+                <input type="text" placeholder="Selecciona dificultad" v-model="name">
+            </div>
+            <!-- <div class="input-field">
+                <input type="text" placeholder="Description" v-model="description">
+            </div> -->
+            <button @click="addTask" class="button">Add</button>
         </div>
-        <button @click="addTask" class="button">Add</button>
     </div>
+    
 </template>
 
 <script setup>
