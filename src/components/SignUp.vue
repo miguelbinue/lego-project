@@ -1,11 +1,17 @@
 <template>
   <div class="container">
+
+    <div class="box signup">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f1">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f2">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f3">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f4">
       <div class="content-box">
 
       <div class="header">
         <div class="header-description">
-          <h3 class="header-title">Register to LEGO</h3>
-          <p class="header-subtitle">Start organizing your tasks!</p>
+          <h3 class="header-title">Register to <br/> LEGO PLAYGROUND</h3>
+          <!-- <p class="header-subtitle">Start organizing your tasks!</p> -->
         </div>
       </div>
 
@@ -57,7 +63,9 @@
       </form>
 
       <div v-show="errorMsg">{{errorMsg}}</div>
+      </div>
     </div>
+    
   </div>
 </template>
 
