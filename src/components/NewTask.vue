@@ -1,5 +1,5 @@
 <template>
-    <h1 class="new-task-title">New Task</h1>
+    <h1 class="new-task-title">Nuevo reto!</h1>
     <div v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
     </div>

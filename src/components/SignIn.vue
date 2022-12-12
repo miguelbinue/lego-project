@@ -2,53 +2,61 @@
 
 <template>
   <div class="container">
-    <div class="content-box">
 
-      <div class="header">
-        <div class="header-description">
-          <h3 class="header-title">Log In to LEGO</h3>
-          <p class="header-subtitle">Start organizing your tasks!</p>
+    <div class="box">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f1">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f2">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f3">
+      <img src="../../assets/images/smiley.jpg" alt="lego-face" id="f4">
+      <div class="content-box">
+
+        <div class="header">
+          <div class="header-description">
+            <h3 class="header-title">Log In to <br/> LEGO PLAYGROUND</h3>
+            <!-- <p class="header-subtitle">Start organizing your tasks!</p> -->
+          </div>
         </div>
+
+        <form @submit.prevent="signIn" class="form-sign-in">
+          <div class="form">
+            <div class="form-input">
+              <label class="input-field-label"></label>
+              <input
+                type="email"
+                class="input-field sign"
+                placeholder="Email"
+                id="email"
+                v-model="email"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label class="input-field-label"></label>
+              <input
+                type="password"
+                class="input-field sign"
+                placeholder="Password"
+                id="password"
+                v-model="password"
+                required
+              />
+            </div>
+            <button class="button" type="submit">Sign In</button>
+            <p>
+              Don't have an account?
+              <PersonalRouter
+                :route="route"
+                :buttonText="buttonText"
+                class="sign-up-link"
+              />
+            </p>
+          </div>
+        </form>
+
+        <div v-show="errorMsg">{{errorMsg}}</div>
       </div>
-
-      <form @submit.prevent="signIn" class="form-sign-in">
-        <div class="form">
-          <div class="form-input">
-            <label class="input-field-label"></label>
-            <input
-              type="email"
-              class="input-field sign"
-              placeholder="Email"
-              id="email"
-              v-model="email"
-              required
-            />
-          </div>
-          <div class="form-input">
-            <label class="input-field-label"></label>
-            <input
-              type="password"
-              class="input-field sign"
-              placeholder="Password"
-              id="password"
-              v-model="password"
-              required
-            />
-          </div>
-          <button class="button" type="submit">Sign In</button>
-          <p>
-            Don't have an account?
-            <PersonalRouter
-              :route="route"
-              :buttonText="buttonText"
-              class="sign-up-link"
-            />
-          </p>
-        </div>
-      </form>
-
-      <div v-show="errorMsg">{{errorMsg}}</div>
     </div>
+    
   </div>
 </template>
 
