@@ -1,17 +1,22 @@
 <template>
   <div class="wrapper">
+    
     <div class="upper-color">
       <Nav />
-      <hr/>
+      <!-- <div class="video"> -->
+        <video playsinline autoplay muted loop poster="../../assets/images/lego-game.180.png">
+          <source src="../../assets/videos/lego.day.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      <!-- </div> -->
+      
       <div class="new-task-block">
-        <div><NewTask @emitTask="getTasks"/></div>
-        <img src="../../assets/images/computer-image.png" alt="computer-image">
+        <div id="pantallaCentral"><NewTask @emitTask="getTasks"/></div>
       </div>
-      <hr/>
     </div>
-    <div class="items">
+    <!-- <div class="items">
       <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks" />
-    </div>
+    </div> -->
   </div>
 </template>
 
