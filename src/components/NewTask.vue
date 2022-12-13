@@ -5,13 +5,23 @@
             <p class="error-text">{{ errorMessage }}</p>
         </div>
         <div class="new-task-input">
-            <div class="input-field">
+            <!-- <div class="input-field">
                 <input type="text" placeholder="Selecciona dificultad" v-model="name">
+            </div> -->
+
+
+            <div class="dropdown">
+                <button class="dropbtn">Selecciona dificultad</button>
+                <div class="dropdown-content">
+                    <a href="#">Facil</a>
+                    <a href="#">Dificil</a>
+                </div>
             </div>
+
             <!-- <div class="input-field">
                 <input type="text" placeholder="Description" v-model="description">
             </div> -->
-            <button @click="addTask" class="button">Add</button>
+            <button @click="addTask" class="button">Create</button>
         </div>
     </div>
     
