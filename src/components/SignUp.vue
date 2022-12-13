@@ -2,8 +2,8 @@
   <div class="container signup-container">
     <!-- <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1"> -->
     <img src="../../assets/images/mecabricks/stormtrooper.png" alt="stormtrooper" id="f2">
-      <img src="../../assets/images/mecabricks/batman.png" alt="batman" id="f3">
-      <!-- <img src="../../assets/images/mecabricks/spiderman.png" alt="spiderman" id="f4"> -->
+    <img src="../../assets/images/mecabricks/batman.png" alt="batman" id="f3">
+    <!-- <img src="../../assets/images/mecabricks/spiderman.png" alt="spiderman" id="f4"> -->
     <div class="box signup">
       <div class="content-box">
 
@@ -14,8 +14,8 @@
         </div>
       </div>
 
-      <form @submit.prevent="signUp" class="form-sign-in">
-        <div class="form">
+      <form @submit.prevent="signUp" class="form">
+        <div class="form-sign-up">
           <div class="form-input">
             <label class="input-field-label"></label>
             <input
@@ -49,7 +49,7 @@
               required
             />
           </div>
-          <button class="button" type="submit"></button>
+          <button class="button-signup" type="submit"></button>
           <p>
             Have an account?
             <PersonalRouter

@@ -1,24 +1,21 @@
-<!-- COMPONENTE BOILERPLATE -->
-
 <template>
   <div class="container signin-container">
-
-    <div class="box">
-      <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1">
-      <img src="../../assets/images/mecabricks/stormtrooper.png" alt="stormtrooper" id="f2">
-      <img src="../../assets/images/mecabricks/batman.png" alt="batman" id="f3">
-      <img src="../../assets/images/mecabricks/spiderman.png" alt="spiderman" id="f4">
+    <!-- <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1"> -->
+    <img src="../../assets/images/mecabricks/stormtrooper.png" alt="stormtrooper" id="f2">
+    <img src="../../assets/images/mecabricks/batman.png" alt="batman" id="f3">
+    <!-- <img src="../../assets/images/mecabricks/spiderman.png" alt="spiderman" id="f4"> -->
+    <div class="box signin">
       <div class="content-box">
 
         <div class="header">
           <div class="header-description">
-            <h3 class="header-title">Log In to <br/> LEGO PLAYGROUND</h3>
+            <!-- <h3 class="header-title">Log In to <br/> LEGO PLAYGROUND</h3> -->
             <!-- <p class="header-subtitle">Start organizing your tasks!</p> -->
           </div>
         </div>
 
-        <form @submit.prevent="signIn" class="form-sign-in">
-          <div class="form">
+        <form @submit.prevent="signIn" class="form">
+          <div class="form-sign-in">
             <div class="form-input">
               <label class="input-field-label"></label>
               <input
@@ -41,9 +38,9 @@
                 required
               />
             </div>
-            <button class="button" type="submit">Sign In</button>
+            <button class="button-signin" type="submit"></button>
             <p>
-              Don't have an account?
+              Don't have an account? <br>
               <PersonalRouter
                 :route="route"
                 :buttonText="buttonText"
