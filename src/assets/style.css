@@ -429,11 +429,11 @@ video{
     height: 100%;
     margin-top: -10%;
 }
-/* img {
+#account img {
     width: 45%;
     height: 10%;
     margin: 50px 0px 40px
-} */
+}
 .new-task-title {
     color: rgb(0, 0, 0);
     font-size: 50px;
