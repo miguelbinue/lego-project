@@ -68,6 +68,40 @@ const addTask = async() => {
     }
 };
 
+//Randomizamos el valor del challenge y queda pendiente combinarlo con otros elementos por determinar
+const randomChallenge = [
+    "Architecture",
+    "City",
+    "Superhero",
+    "Disney",
+    "Vehicle",
+    "Videogames",
+    "Space",
+    "Mechanisms",
+    "Animals",
+    "Fantasy",
+]
+const randomDetail = [
+    " Complex",
+    " Funny",
+    " Articulated",
+    " 2D",
+    " Monochromatic",
+    " Inverted",
+    " Follow the playground",
+    " Replace the playground",
+    " Do it yourself",
+    " {{randomChallenge}} with {{randomChallenge}}",
+]
+
+const randomIndex = Math.floor(Math.random() * randomChallenge.length)
+const randomItem = randomChallenge[randomIndex];
+
+const randomIndex2 = Math.floor(Math.random() * randomDetail.length)
+const randomItem2 = randomDetail[randomIndex2];
+
+console.log(randomItem + randomItem2);
+
 </script>
 
 <style></style>
