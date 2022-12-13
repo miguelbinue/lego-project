@@ -25,6 +25,16 @@ body{
     background-position: center;
 }
 
+
+
+/* SignIn Component */
+
+.signin{
+    background: url("../../assets/images/lego-signin.circle.png") center;
+    width: 868px;
+    height: 100%;
+}
+
 .signup-container{
     background-image: url("../../assets/images/lego-signup.203.png");
 }
@@ -33,20 +43,15 @@ body{
     background-image: url("../../assets/images/lego-signin.198.png");
 }
 
-/* SignIn Component */
-
-.signup-container #f1{
-    left: 17%;
-    top: -33%;
-}
+/* Muñequitos lego q se asoman */
 
 #f1{    
     width: 384px;
     height: 216px;
     z-index: 0;
     position: absolute;
-    left: 18%;
-    top: -37%;
+    left: 17%;
+    top: -33%;
     right: auto;
     bottom: auto;
     background: none;
@@ -59,18 +64,14 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-.signup-container #f2{
-    right: 65%;
-    top: 32%;
-}
 
 #f2{
     width: 216px;
     height: 384px;
     z-index: 0;
     position: absolute;
-    right: 80%;
-    top: -8%;
+    right: 65%;
+    top: 32%;
     left: auto;
     bottom: auto;
     background: none;
@@ -84,18 +85,14 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-.signup-container #f3{
-    right: 24%;
-    top: 34%;
-}
 
 #f3{
     width: 216px;
     height: 384px;
     z-index: 0;
     position: absolute;
-    right: -20%;
-    top: -7%;
+    right: 24%;
+    top: 34%;
     left: auto;
     bottom: auto;
     background: none;
@@ -110,10 +107,6 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-.signup-container #f4{
-    right: 18%;
-    top: 66%;
-}
 
 #f4{
     width: 384px;
@@ -121,7 +114,7 @@ body{
     z-index: 0;
     position: absolute;
     right: 18%;
-    top: 62%;
+    top: 66%;
     left: auto;
     bottom: auto;
     background: none;
@@ -188,7 +181,7 @@ body{
     padding: 12px 130px 12px 20px;
 }
 
-.form-sign-in{
+.form{
     margin-top: 183px;
     height: 500px;
 }
@@ -203,7 +196,17 @@ body{
     color: rgba(255, 255, 255, 0.434);
 }
 
-#sign-in .button {
+.button-signin {
+    border: none;
+    background: none;
+    border-radius: 0;
+    padding: 38px 97px;
+    margin: 108px 0 43px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.button-signup {
     border: none;
     background: none;
     border-radius: 0;
@@ -218,13 +221,27 @@ body{
     text-align: center;
     flex-direction: column;
 }
-.form {
+
+.form-sign-up {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 52px;
 }
+
+.form-sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.form-sign-in p{
+    text-align: center;
+}
+
 .sign-up-link {
     text-decoration: none;
     color: rgb(255, 120, 120);
@@ -242,7 +259,6 @@ p {
     background: url("../../assets/images/lego-signup.circle.png") center;
     width: 868px;
     height: 100%;
-    /* background: center; */
 }
 
 /* Nav */
