@@ -1,13 +1,12 @@
 <template>
+  
+  
+      <!-- <div class="video"> -->
+  <Video/>   
   <div class="wrapper">
     
     <div class="upper-color">
       <Nav />
-      <!-- <div class="video"> -->
-        <video playsinline autoplay muted loop poster="../../assets/images/lego-game.180.png">
-          <source src="../../assets/videos/lego.day.mp4" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
       <!-- </div> -->
       
       <div class="new-task-block">
@@ -27,6 +26,7 @@ import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
+import Video from '../components/video.vue';
 
 const taskStore = useTaskStore();
 

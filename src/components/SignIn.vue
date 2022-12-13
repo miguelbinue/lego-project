@@ -1,7 +1,7 @@
 <!-- COMPONENTE BOILERPLATE -->
 
 <template>
-  <div class="container">
+  <div class="container signin-container">
 
     <div class="box">
       <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1">
