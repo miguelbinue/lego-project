@@ -3,20 +3,20 @@
   
       <!-- <div class="video"> -->
   <Video/>   
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     
-    <div class="upper-color">
+    <!-- <div class="upper-color"> -->
       <Nav />
       <!-- </div> -->
       
       <div class="new-task-block">
         <div id="pantallaCentral"><NewTask @emitTask="getTasks"/></div>
       </div>
-    </div>
+    <!-- </div> -->
     <!-- <div class="items">
       <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks" />
     </div> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <script setup>

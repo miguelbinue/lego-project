@@ -272,7 +272,6 @@ nav{
     background-color: white;
     padding: 1% 0;
     margin-bottom: 62px;
-    margin-top: -51px;
     padding-bottom: -6px;
 }
 
@@ -473,13 +472,20 @@ video{
     font-size: 20px;
 }
 
-#newTask{
+/* #newTask{
     background-color: #cfcfcf;
     height: 419px;
     width: 743px;
     margin-top: 10.5%;
-}
+} */
 
+#newTask {
+    background-color: #cfcfcf;
+    height: 419px;
+    width: 743px;
+    position: absolute;
+    top: 30.5%;
+  }
 
 .dropbtn {
     background-color: #4CAF50;
@@ -580,9 +586,8 @@ video{
     }
 
     #newTask{
-        height: 318px;
+        height: 320px;
         width: 568px;
-        margin-top: 3%;
     }
 
     nav{
