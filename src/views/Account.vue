@@ -11,6 +11,7 @@
         <img v-if="this.level > 2" :src="preprevLevel" alt="character">
     </div>
   </div>
+  <Footer/>
  
 </template>
 
@@ -19,6 +20,7 @@
   import { onMounted, ref, toRefs } from 'vue';
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
+  import Footer from '../components/Footer.vue';
 
 const userStore = useUserStore();
 

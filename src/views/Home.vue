@@ -12,6 +12,8 @@
       <div class="new-task-block">
         <div id="pantallaCentral"><NewTask @emitTask="getTasks"/></div>
       </div>
+
+      <Footer/>
     <!-- </div> -->
     <!-- <div class="items">
       <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks" />
@@ -27,6 +29,7 @@ import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 import Video from '../components/video.vue';
+import Footer from '../components/Footer.vue';
 
 const taskStore = useTaskStore();
 

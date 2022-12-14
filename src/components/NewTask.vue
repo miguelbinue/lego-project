@@ -10,13 +10,16 @@
             </div> -->
 
 
-            <div class="dropdown">
+            <!-- <div class="dropdown">
                 <button class="dropbtn">Selecciona dificultad</button>
                 <div class="dropdown-content">
                     <a href="#">Facil</a>
                     <a href="#">Dificil</a>
                 </div>
-            </div>
+            </div> -->
+
+            <!-- <p>Selecciona dificultad: </p> -->
+            <button class="ui button big toggle" :class="{active:isActive}" @click="toggle()">{{isActive ? 'EASY' : 'HARD'}}</button>
 
             <!-- <div class="input-field">
                 <input type="text" placeholder="Description" v-model="description">
@@ -45,7 +48,18 @@ const errorMessage = ref(null);
 
 const tasks = ref([]);
 
+let isActive = ref(false);
+
 const emit = defineEmits(["emitTask"]);
+
+// function toggle() {
+//    this.isActive = !this.enable;
+// }
+
+const toggle = async () => {
+    isActive.value = isActive.value ? false : true;
+    console.log(isActive);
+}
 
 // Arrow function para crear tareas.
 const addTask = async() => {
