@@ -1,8 +1,8 @@
 <template>
   <div class="container signin-container">
     <!-- <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1"> -->
-    <img src="../../assets/images/mecabricks/stormtrooper - rotado.png" alt="stormtrooper" id="f2">
-    <img src="../../assets/images/mecabricks/batman - rotado.png" alt="batman" id="f3">
+    <img src="../../assets/images/mecabricks/stormtrooper-rotado.png" alt="stormtrooper" id="f2">
+    <img src="../../assets/images/mecabricks/batman-rotado.png" alt="batman" id="f3">
     <!-- <img src="../../assets/images/mecabricks/spiderman.png" alt="spiderman" id="f4"> -->
     <div class="box signin">
       <div class="content-box">
