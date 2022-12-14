@@ -454,11 +454,7 @@ video{
     height: 100%;
     margin-top: -10%;
 }
-#account img {
-    width: 45%;
-    height: 10%;
-    margin: 50px 0px 40px
-}
+
 .new-task-title {
     color: rgb(0, 0, 0);
     font-size: 50px;
@@ -568,6 +564,17 @@ video{
     padding: 6% 0 0 6%;
 }
 
+#account img {
+    width: 30%;
+    height: 10%;
+    margin: 50px 0px 40px;
+}
+
+.levels{
+    display: flex;
+    justify-content: space-around;
+}
+
 /* MOVIL  */
 @media (max-width: 420px){
 
@@ -620,4 +627,76 @@ video{
         margin-top: -17px;
         padding-bottom: 5px;
     }
+
+    /* SIGN IN */
+    .signin{
+        background: url(/assets/images/Mesa\ de\ trabajo\ 1lego-signup.circle-ipad.png) center;
+        /* TODO: cambiar url!! esta es la del signup */
+        width: 660px;
+    }
+
+    .form {
+        margin-top: 100px;
+        height: 426px;
+    }
+
+    .input-field{
+        padding: 12px 60px 12px 12px;
+    }
+
+    .button-signin{
+        margin: 68px 0 8px 0;
+        padding: 30px 75px;
+    }
+
+    .form-sign-in p{
+        max-width: 150px;
+    }
+
+    #f2{
+        right: 66%;
+        top: 26%;
+    }
+
+    #f2:hover {
+        transform: translate(-130px, 0);
+    }
+
+    #f3{
+        right: 16%;
+        top: 27%;
+    }
+
+    #f3:hover {
+        transform: translate(120px, 0);
+    }
+    
+    /* SIGN UP */
+    .signup{
+        background: url(/assets/images/Mesa\ de\ trabajo\ 1lego-signup.circle-ipad.png) center;
+        width: 660px;
+    }
+
+    .form-sign-up{
+        margin-top: 69px;
+    }
+
+    .signup .form-input{
+        margin: -2px;
+    }
+
+    .signup .input-field{
+        padding: 8px 60px 8px 12px;
+    }
+
+    .button-signup{
+        margin: 60px 0 18px 0;
+        padding: 30px 75px;
+    }
+
+    .form-sign-up p{
+        max-width: 150px;
+        text-align: center;
+    }
+    
 }
