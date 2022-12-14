@@ -5,12 +5,15 @@
     <button v-on:click="nextLevel()">Level Up</button>
     <h2>level: {{level}}</h2>
     <h2>Character: {{name}}</h2>
-    <div class="levels">
-        <img :src="array" alt="character">
-        <img v-if="this.level > 1" :src="prevLevel" alt="character">
-        <img v-if="this.level > 2" :src="preprevLevel" alt="character">
-    </div>
+    
   </div>
+  <div class="character-box">
+      <div class="levels">
+        <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
+        <div class="character-circle character-main"><img :src="array" alt="character"></div>
+        <div class="character-circle character-after"><img v-if="this.level > 2" :src="preprevLevel" alt="character"></div>
+      </div>
+    </div>
  
 </template>
 
