@@ -1,6 +1,6 @@
 <template>
     <div id="newTask">
-        <h1 class="new-task-title">LEGO Playground</h1>
+        <h1 class="new-task-title">Nuevo reto!</h1>
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
         </div>
