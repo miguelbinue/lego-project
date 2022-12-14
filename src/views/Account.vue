@@ -1,20 +1,21 @@
 <template>
   <Nav />
-  <div id="account">
-    <h1>Name: {{userEmail.split("@")[0]}}</h1>
-    <button v-on:click="nextLevel()">Level Up</button>
-    <h2>level: {{level}}</h2>
-    <h2>Character: {{name}}</h2>
-    
-  </div>
-  <div class="character-box">
+  <div class="content-account">
+    <div class="character-box">
       <div class="levels">
         <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
         <div class="character-circle character-main"><img :src="array" alt="character"></div>
         <div class="character-circle character-after"><img v-if="this.level > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
- 
+    <div class="text-account">
+      <h2 class="account-character-name">{{name}}</h2>
+      <h1 class="account-name">Name: {{userEmail.split("@")[0]}}</h1>
+      <h2 class="account-level">level: {{level}}</h2>
+      <button v-on:click="nextLevel()">Level Up</button>
+    </div>
+  </div>
+  <!-- <Countdown/> -->
 </template>
 
 <script setup>
@@ -22,6 +23,7 @@
   import { onMounted, ref, toRefs } from 'vue';
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
+  import Countdown from '../components/Countdown.vue'
 
 const userStore = useUserStore();
 
