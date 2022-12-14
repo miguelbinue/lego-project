@@ -4,6 +4,7 @@
     <h1>Name: {{userEmail.split("@")[0]}}</h1>
     <button v-on:click="nextLevel()">Level Up</button>
     <h2>level: {{level}}</h2>
+    <h2>Character: {{name}}</h2>
     <div class="levels">
         <img :src="array" alt="character">
         <img v-if="this.level > 1" :src="prevLevel" alt="character">
@@ -204,7 +205,8 @@ let level = ref(1);
 let array = ref();
 let prevLevel = ref();
 let preprevLevel = ref();
-let niveles;
+let name = ref('');
+
 let levelProgresion = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (level.value <2) {
@@ -218,6 +220,7 @@ let levelProgresion = (arr) => {
       preprevLevel.value = arr[level.value-2].image;
     }
   }
+  name.value = arr[level.value].title;
   // niveles = { array, prevLevel, preprevLevel };
   // console.log(niveles);
   // return niveles;
