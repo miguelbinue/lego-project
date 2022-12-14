@@ -571,23 +571,48 @@ video{
 
 /* ACCOUNT */
 #account{
-    margin-top: 6%;
+    margin-top: 0%;
     background-color: rgb(254,	196,	0);
 }
 #account h1{
     padding: 6% 0 0 6%;
 }
 
-#account img {
-    width: 30%;
-    height: 10%;
-    margin: 50px 0px 40px;
+.character-box img {
+    width: 45%;
+}
+
+.character-circle{
+    display: block;
+    position: absolute;
+    width: 50%;
+    text-align: center;
 }
 
 .levels{
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;    
 }
+
+.character-main {
+    z-index: 10;
+}
+
+.character-after {
+    margin-left: 10%;
+}
+
+.character-before {
+    margin-left: -10%;
+}
+
+.character-box {
+    width: 100%;
+}
+
+
 
 /* MOVIL  */
 @media (max-width: 420px){
@@ -644,8 +669,7 @@ video{
 
     /* SIGN IN */
     .signin{
-        background: url(/assets/images/lego-signup.circle-ipad.png) center;
-        /* TODO: cambiar url!! esta es la del signup */
+        background: url(/assets/images/lego-signin.circle-ipad.png) center;
         width: 660px;
     }
 
