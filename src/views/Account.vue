@@ -7,6 +7,7 @@
     <h2>Character: {{name}}</h2>
     
   </div>
+  <Footer/>
   <div class="character-box">
       <div class="levels">
         <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
@@ -22,6 +23,7 @@
   import { onMounted, ref, toRefs } from 'vue';
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
+  import Footer from '../components/Footer.vue';
 
 const userStore = useUserStore();
 

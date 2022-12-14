@@ -2,7 +2,7 @@
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
     <router-link to="/">
-      Home
+      HOME
     </router-link>
 
     <ul>
@@ -12,17 +12,17 @@
         -->
 
         <li>
-          <router-link to="/account">Your Account</router-link>
+          <router-link to="/account">YOUR ACCOUNT</router-link>
         </li> 
     </ul>
 
     <div>
       <ul>
         <li class="log-out-welcome">
-          <p>Welcome, {{userEmail.split("@")[0]}}</p>
+          <p>WELCOME, {{userEmail.split("@")[0].toUpperCase()}}</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="button">LOG OUT</button>
         </li>
       </ul>
     </div>
