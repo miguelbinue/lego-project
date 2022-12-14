@@ -16,6 +16,7 @@
     </div>
   </div>
   <!-- <Countdown/> -->
+  <Footer/>
 </template>
 
 <script setup>
@@ -24,6 +25,7 @@
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
   import Countdown from '../components/Countdown.vue'
+  import Footer from '../components/Footer.vue';
 
 const userStore = useUserStore();
 

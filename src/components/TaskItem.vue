@@ -2,8 +2,8 @@
 <div class="container-item">
     <div v-if="!done">
         <div class="item-title">
-            <h3>{{task.title}}</h3>
-            <button id="done" @click="taskDone">Done</button>
+            <h3>{{random}}</h3>
+            <button id="done" @click="emit('hideTask')">Done</button>
         </div>        
         <p>{{task.description}}</p>
     </div>
@@ -14,14 +14,14 @@
         </div>   
         <p>{{task.description}}</p>
     </div>
-    <div class="modify-task">
+    <!-- <div class="modify-task">
         <button id="edit" @click="(openEdit = !openEdit)">Edit</button>
         <button @click="deleteTask">Delete</button>
-    </div>
+    </div> -->
     
     <div action="#" v-show="!openEdit">
         <div class="input-field">
-            <input type="text" v-model="name">
+            <input type="text" v-model="random">
         </div>
         <div class="input-field">
             <input type="text" v-model="description">
@@ -37,7 +37,7 @@ import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 
-const name = ref(props.task.title);
+// const name = ref(random);
 const description = ref(props.task.description);
 const is_complete = ref(props.task.is_complete);
 const taskStore = useTaskStore();
@@ -45,7 +45,7 @@ const taskStore = useTaskStore();
 const openEdit = ref(true);
 const done = ref(props.task.is_complete);
 
-const emit = defineEmits(["getTasks"]);
+const emit = defineEmits(["getTasks", "hideTask"]);
 
 const props = defineProps({
     task: Object,
@@ -71,7 +71,40 @@ const taskDone = async () => {
 }
 
 
-// let 
+//Randomizamos el valor del challenge y queda pendiente combinarlo con otros elementos por determinar
+const randomChallenge = [
+    "Architecture",
+    "City",
+    "Superhero",
+    "Disney",
+    "Vehicle",
+    "Videogames",
+    "Space",
+    "Mechanisms",
+    "Animals",
+    "Fantasy",
+]
+const randomDetail = [
+    " Complex",
+    " Funny",
+    " Articulated",
+    " 2D",
+    " Monochromatic",
+    " Inverted",
+    " Follow the playground",
+    " Replace the playground",
+    " Do it yourself",
+    " {{randomChallenge}} with {{randomChallenge}}",
+]
+
+const randomIndex = Math.floor(Math.random() * randomChallenge.length)
+const randomItem = randomChallenge[randomIndex];
+
+const randomIndex2 = Math.floor(Math.random() * randomDetail.length)
+const randomItem2 = randomDetail[randomIndex2];
+
+const random = ref(randomItem + " - " + randomItem2);
+console.log(random);
 
 </script>
 

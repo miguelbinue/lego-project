@@ -10,8 +10,16 @@
       <!-- </div> -->
       
       <div class="new-task-block">
-        <div id="pantallaCentral"><NewTask @emitTask="getTasks"/></div>
+        <div id="pantallaCentral"><NewTask v-if="!showTask" @emitTask="getNewTask"/></div>
+
+        <TaskItem @hideTask="hideTask" v-if="showTask" :task="created"/>
       </div>
+
+      <!-- <div>
+        
+      </div> -->
+
+      <Footer/>
     <!-- </div> -->
     <!-- <div class="items">
       <TaskItem v-for="task in tasks" :key="task.id" :task="task" @getTasks="getTasks" />
@@ -27,16 +35,29 @@ import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 import Video from '../components/video.vue';
+import Footer from '../components/Footer.vue';
 
 const taskStore = useTaskStore();
 
 // Variable para guardar las tareas de supabase
 const tasks = ref([]);
 
+const created = ref(false);
+const showTask = ref(false);
+
 // Creamos una función que conecte a la store para conseguir las tareas de supabase
 const getTasks = async() => {
   tasks.value = await taskStore.fetchTasks();
 };
+
+const getNewTask = async (task) => {
+  created.value = task;
+  showTask.value = true;
+}
+
+const hideTask = async () => {
+  showTask.value = false;
+}
 
 getTasks();
 

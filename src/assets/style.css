@@ -293,11 +293,10 @@ ul button{
 
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: white;
-    padding: 1% 0;
+    padding: 0.9% 0;
     margin-bottom: 62px;
-    padding-bottom: -6px;
 }
 
 a{
@@ -308,6 +307,21 @@ a{
 
 nav p{
     color: rgb(0, 0, 0);
+}
+
+/* Footer */
+
+.footer{
+    bottom: 0%;
+    position: absolute;
+    margin-bottom: 0;
+    height: 31px;
+    justify-content: center;
+}
+
+.footer img{
+    width: 50px;
+    margin-right: 10px;
 }
 
 
@@ -355,7 +369,7 @@ video{
 
 /* Task Item */
 .container-item{
-    padding: 25px;
+    /* padding: 25px;
     margin: 25px;
     width: 80%;
     box-shadow: 5px 5px 15px 0 rgb(20 20 20 / 30%);
@@ -363,7 +377,18 @@ video{
     border-left-color: rgb(255, 120, 120);
     border-left-style: solid;
     border-left-width: 10px;
+     */
+
     background-color: rgb(189, 204, 212);
+
+    width: 39%;
+    height: 39%;
+    top: 30.5%;
+    position: absolute;
+    display: flex;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
 }
 .container-item p{
     font-size: 20px;
