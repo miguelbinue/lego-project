@@ -10,8 +10,14 @@
       <!-- </div> -->
       
       <div class="new-task-block">
-        <div id="pantallaCentral"><NewTask @emitTask="getTasks"/></div>
+        <div id="pantallaCentral"><NewTask v-if="!showTask" @emitTask="getNewTask"/></div>
+
+        <TaskItem @hideTask="hideTask" v-if="showTask" :task="created"/>
       </div>
+
+      <!-- <div>
+        
+      </div> -->
 
       <Footer/>
     <!-- </div> -->
@@ -36,10 +42,22 @@ const taskStore = useTaskStore();
 // Variable para guardar las tareas de supabase
 const tasks = ref([]);
 
+const created = ref(false);
+const showTask = ref(false);
+
 // Creamos una función que conecte a la store para conseguir las tareas de supabase
 const getTasks = async() => {
   tasks.value = await taskStore.fetchTasks();
 };
+
+const getNewTask = async (task) => {
+  created.value = task;
+  showTask.value = true;
+}
+
+const hideTask = async () => {
+  showTask.value = false;
+}
 
 getTasks();
 
