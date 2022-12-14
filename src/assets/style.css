@@ -630,8 +630,7 @@ video{
 
     /* SIGN IN */
     .signin{
-        background: url(/assets/images/lego-signup.circle-ipad.png) center;
-        /* TODO: cambiar url!! esta es la del signup */
+        background: url(/assets/images/lego-signin.circle-ipad.png) center;
         width: 660px;
     }
 
