@@ -7,7 +7,6 @@
     <h2>Character: {{name}}</h2>
     
   </div>
-  <Footer/>
   <div class="character-box">
       <div class="levels">
         <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
@@ -15,7 +14,7 @@
         <div class="character-circle character-after"><img v-if="this.level > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
- 
+  <Footer/>
 </template>
 
 <script setup>
