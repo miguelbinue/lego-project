@@ -2,15 +2,12 @@
   <Nav />
   <div id="account">
     <h1>Name: {{userEmail.split("@")[0]}}</h1>
-    <button v-on:click="nextLevel()">Desbloquear</button>
-    <p>level: {{level}}</p>
-    <div>
-      <!-- <img :src="avatar_url ? avatar_url : ('../../assets/images/mecabricks/harry-potter.png')" alt="Profile picture"> -->
-      <div>
+    <button v-on:click="nextLevel()">Level Up</button>
+    <h2>level: {{level}}</h2>
+    <div class="levels">
         <img :src="array" alt="character">
         <img v-if="this.level > 1" :src="prevLevel" alt="character">
         <img v-if="this.level > 2" :src="preprevLevel" alt="character">
-      </div>
     </div>
   </div>
  
