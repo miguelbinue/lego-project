@@ -586,7 +586,7 @@ video{
     font-size: 50px;
     margin: -117px 0 0 0;
     z-index: 60;
-    color: rgb(255 204 0);
+    color: rgb(255 204 0 / 75%);
 }
 
 .account-box-name {
@@ -603,12 +603,13 @@ video{
 
 .account-name {
     font-size: 33px;
+    color: #ffffff6e;
 }
 
 .account-level {
     margin: 0;
     font-size: 45px;
-    color: white;
+    color: #3e8e41;
 }
 
 .content-account {
