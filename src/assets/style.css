@@ -587,17 +587,30 @@ video{
 
 .account-character-name {
     font-size: 50px;
-    margin: 30px 0 0 0;
+    margin: -152px 0 0 0;
+    z-index: 60;
+    color: rgb(255 204 0)
+}
+
+.account-box-name {
+    width: 36%;
+    margin-left: 24%;
+}
+
+.account-box-level {
+    width: 16%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
 }
 
 .account-name {
     font-size: 50px;
-    margin:0;
 }
 
 .account-level {
-    font-size: 50px;
-    margin:0;
+    margin: 0;
+    font-size: 120px;
 }
 
 .content-account {
@@ -608,7 +621,15 @@ video{
 }
 
 .text-account {
-    margin-top: 180px;
+    margin-top: 258px;
+    display: flex;
+    align-items: center;
+    width: 100%
+
+}
+
+.button-level {
+    /* display: none; */
 }
 
 .character-box img {
@@ -618,8 +639,9 @@ video{
 .character-circle{
     display: block;
     position: absolute;
-    width: 50%;
+    width: 40%;
     text-align: center;
+    top: -97px;
 }
 
 .levels{
@@ -628,27 +650,42 @@ video{
     margin: 0 auto;
     justify-content: center;  
     align-items: center;  
+    margin-top: 94px;
 }
 
 .character-main {
     z-index: 10;
     margin: 0 4%;
-    border: 5px solid #000
     
 }
 
 .character-after {
-    margin-left: 25%;
+    margin-left: 15%;
     opacity: 30%;
+    z-index: 9;
 }
 
 .character-before {
-    margin-left: -25%;
+    margin-left: -15%;
     opacity: 30%;
+    z-index: 9;
 }
 
 .character-box {
     width: 100%;
+}
+
+.screen-character {
+    width: 44%;
+    height: 341px;
+    background-color: #222222;
+    position: absolute;
+    display: flex;
+    top: 129px;
+    z-index: 5;
+    border-radius: 5px;
+    border-radius: 50px;
+    border: 6px solid #3e3e3e;
 }
 
 
@@ -703,7 +740,6 @@ video{
     nav{
         margin-bottom: 35px;
         margin-top: -17px;
-        padding-bottom: 5px;
     }
 
     /* SIGN IN */
