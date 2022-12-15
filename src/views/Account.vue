@@ -3,15 +3,16 @@
   <div class="content-account">
     <div class="character-box">
       <div class="levels">
-        <div class="character-circle character-before"><img v-if="level > 1" :src="prevLevel" alt="character"></div>
+        <div class="character-circle character-before"><img v-if="this.userLevel > 1" :src="prevLevel" alt="character"></div>
         <div class="character-circle character-main"><img :src="array" alt="character"></div>
-        <div class="character-circle character-after"><img v-if="level > 2" :src="preprevLevel" alt="character"></div>
+        <div class="character-circle character-after"><img v-if="userLevel > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
     <div class="text-account">
       <h2 class="account-character-name">{{name}}</h2>
       <h1 class="account-name">Name: {{userEmail}}</h1>
       <h2 class="account-level">level: {{level}}</h2>
+      <h2 class="account-level">User level: {{userLevel}}</h2>
       <button v-on:click="nextLevel()">Level Up</button>
     </div>
   </div>
@@ -30,6 +31,7 @@
 const userStore = useUserStore();
 
 const level = ref(1);
+const userLevel = ref(null);
 
   let getUser = null;
   const userEmail = ref(null);
@@ -41,6 +43,7 @@ const level = ref(1);
 
   onMounted(() => {
     getProfile();
+    levelProgresion(characterArr);
   });
 
   async function getProfile() {
@@ -48,10 +51,19 @@ const level = ref(1);
     username.value = userStore.profile.username;
     avatar_url.value = userStore.profile.avatar_url;
     userEmail.value = userStore.user.email.split("@")[0];
+    userLevel.value = userStore.profile.level;
     getUser = useUserStore().user;
     
     console.log(userStore.profile);
+        
+    
+    console.log("Level Progr" + characterArr[0].id);
+    // console.log(levelProgresion(characterArr[0]));
+
+    // console.log("Id del userlevel" + userLevel.value);
   }
+
+  getProfile();
 
   async function signOut() {
     try {
@@ -66,7 +78,7 @@ const level = ref(1);
   }
 
 function nextLevel() {
-  level.value++;
+  userLevel.value++;
   levelProgresion(characterArr);
 }
 
@@ -219,29 +231,40 @@ let array = ref();
 let prevLevel = ref();
 let preprevLevel = ref();
 let name = ref('');
+let currentId = ref();
 
 let levelProgresion = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    if (level.value <2) {
-      array.value = arr[level.value].image;
-      prevLevel.value = arr[level.value].image;
-      preprevLevel.value = arr[level.value].image;
+    if (userLevel.value < 2) {
+      console.log("Id del userlevel" + userLevel.value);
+      console.log("Id del level" + level.value);
+      array.value = arr[userLevel.value].image;
+      prevLevel.value = arr[userLevel.value].image;
+      preprevLevel.value = arr[userLevel.value].image;
     }
-    else if (arr[level.value].id === i) {
-      array.value = arr[level.value].image;
-      prevLevel.value = arr[level.value-1].image;
-      preprevLevel.value = arr[level.value-2].image;
+    else if (arr[userLevel.value].id === i) {
+      array.value = arr[userLevel.value].image;
+      prevLevel.value = arr[userLevel.value-1].image;
+      preprevLevel.value = arr[userLevel.value - 2].image;
+
+      // id del objeto, id del userLevel
+      console.log("Id del objeto: " + arr[level.value].id);
+      console.log("Id del userlevel" + userLevel.value);
     }
   }
-  name.value = arr[level.value].title;
+  name.value = arr[userLevel.value].title;
+
+  // currentId.value = arr[userLevel.value].id;
+  // return currentId.value;
+  // console.log(currentId.value);
   // niveles = { array, prevLevel, preprevLevel };
   // console.log(niveles);
   // return niveles;
 }
 
+console.log("currentID" + characterArr[1].id);
 
-levelProgresion(characterArr);
-// console.log(levelProgresion(characterArr[0]));
+
 
 </script>
 
