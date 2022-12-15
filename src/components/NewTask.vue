@@ -12,19 +12,6 @@
             <!-- <p>Selecciona dificultad: </p> -->
             <button class="ui button big toggle" :class="{active:isActive}" @click="toggle()">{{isActive ? 'EASY' : 'HARD'}}</button>
 
-            <div class="ui buttons big">
-                <button
-                    class="ui button toggle"
-                    @click="toggle"
-                    :class="[isHard ? 'active' : '']"
-                >Hard</button>
-                <button
-                    class="ui button toggle"
-                    @click="toggle"
-                    :class="[!isHard ? 'active' : '']"
-                >Easy</button>
-            </div>
-
             <!-- <div class="input-field">
                 <input type="text" placeholder="Description" v-model="description">
             </div> -->
@@ -64,9 +51,9 @@ const isHard = ref(true);
 
 const toggle = async () => {
     isActive.value = isActive.value ? false : true;
-    console.log("Is Active " + isActive.value);
+    // console.log("Is Active " + isActive.value);
     isHard.value = !isHard.value;
-    console.log("Is Hard " + isHard.value);
+    // console.log("Is Hard " + isHard.value);
 }
 
 // Arrow function para crear tareas.
