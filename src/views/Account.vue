@@ -1,6 +1,8 @@
 <template>
   <Nav />
+  <VideoAccount/>
   <div class="content-account">
+    <h2 class="account-character-name">{{name}}</h2>
     <div class="character-box">
       <div class="levels">
         <div class="character-circle character-before"><img v-if="level > 1" :src="prevLevel" alt="character"></div>
@@ -8,11 +10,15 @@
         <div class="character-circle character-after"><img v-if="level > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
+    <div class="screen-character"></div>
     <div class="text-account">
-      <h2 class="account-character-name">{{name}}</h2>
-      <h1 class="account-name">Name: {{userEmail}}</h1>
-      <h2 class="account-level">level: {{level}}</h2>
-      <button v-on:click="nextLevel()">Level Up</button>
+      <div class="account-box-name">
+        <h1 class="account-name">{{userEmail.split("@")[0]}}</h1>
+      </div>
+      <div class="account-box-level">
+        <h2 class="account-level">{{level}}</h2>
+        <button class="button-level" v-on:click="nextLevel()">Level Up</button>
+      </div>
     </div>
   </div>
   <!-- <Countdown/> -->
@@ -26,7 +32,7 @@
   import Nav from '../components/Nav.vue';
   import Countdown from '../components/Countdown.vue'
   import Footer from '../components/Footer.vue';
-
+  import VideoAccount from '../components/VideoAccount.vue';
 const userStore = useUserStore();
 
 const level = ref(1);
