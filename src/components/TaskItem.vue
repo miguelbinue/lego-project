@@ -3,17 +3,18 @@
     <div v-if="!done">
         <div class="item-title">
             <h3>{{random}}</h3>
+            <Countdown/>
             <button id="done" @click="retoDone()">Done</button>
         </div>        
         <p>{{task.description}}</p>
     </div>
-    <div v-else class="tachado">
+    <!-- <div v-else class="tachado">
         <div class="item-title">
             <h3>{{task.title}}</h3>
             <button id="done" @click="taskDone">Undone</button>
         </div>   
         <p>{{task.description}}</p>
-    </div>
+    </div> -->
     <!-- <div class="modify-task">
         <button id="edit" @click="(openEdit = !openEdit)">Edit</button>
         <button @click="deleteTask">Delete</button>
@@ -37,6 +38,7 @@ import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 import { useUserStore } from "../stores/user";
+import Countdown from './Countdown.vue';
 
 // const name = ref(random);
 const description = ref(props.task.description);
@@ -101,7 +103,7 @@ const randomDetail = [
     " Follow the playground",
     " Replace the playground",
     " Do it yourself",
-    " {{randomChallenge}} with {{randomChallenge}}",
+    // " {{randomChallenge}} with {{randomChallenge}}",
 ]
 
 const randomIndex = Math.floor(Math.random() * randomChallenge.length)

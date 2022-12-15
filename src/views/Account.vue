@@ -17,7 +17,7 @@
       </div>
       <div class="account-box-level">
         <h2 class="account-level">{{userLevel}}</h2>
-        <button class="button-level" v-on:click="nextLevel()">Level Up</button>
+        <!-- <button class="button-level" v-on:click="nextLevel()">Level Up</button> -->
       </div>
     </div>
   </div>
