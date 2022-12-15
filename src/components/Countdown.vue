@@ -5,7 +5,7 @@
     <!-- <div v-if="isHard == false">
         {{ timerCountEasy }}
     </div> -->
-    <div v-if="timerCountHard == 0 || timerCountEasy == 0">Time's Up! Try Again</div>
+    <div v-if="timerCountHard == 0">Time's Up! Try Again</div>
 </template>
 
 <script>
