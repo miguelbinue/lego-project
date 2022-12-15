@@ -9,17 +9,21 @@
                 <input type="text" placeholder="Selecciona dificultad" v-model="name">
             </div> -->
 
-
-            <!-- <div class="dropdown">
-                <button class="dropbtn">Selecciona dificultad</button>
-                <div class="dropdown-content">
-                    <a href="#">Facil</a>
-                    <a href="#">Dificil</a>
-                </div>
-            </div> -->
-
             <!-- <p>Selecciona dificultad: </p> -->
             <button class="ui button big toggle" :class="{active:isActive}" @click="toggle()">{{isActive ? 'EASY' : 'HARD'}}</button>
+
+            <div class="ui buttons big">
+                <button
+                    class="ui button toggle"
+                    @click="toggle"
+                    :class="[isHard ? 'active' : '']"
+                >Hard</button>
+                <button
+                    class="ui button toggle"
+                    @click="toggle"
+                    :class="[!isHard ? 'active' : '']"
+                >Easy</button>
+            </div>
 
             <!-- <div class="input-field">
                 <input type="text" placeholder="Description" v-model="description">
@@ -52,13 +56,17 @@ let isActive = ref(false);
 
 const emit = defineEmits(["emitTask"]);
 
+const isHard = ref(true);
+
 // function toggle() {
 //    this.isActive = !this.enable;
 // }
 
 const toggle = async () => {
     isActive.value = isActive.value ? false : true;
-    console.log(isActive);
+    console.log("Is Active " + isActive.value);
+    isHard.value = !isHard.value;
+    console.log("Is Hard " + isHard.value);
 }
 
 // Arrow function para crear tareas.
