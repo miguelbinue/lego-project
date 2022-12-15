@@ -3,9 +3,9 @@
   <div class="content-account">
     <div class="character-box">
       <div class="levels">
-        <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
+        <div class="character-circle character-before"><img v-if="level > 1" :src="prevLevel" alt="character"></div>
         <div class="character-circle character-main"><img :src="array" alt="character"></div>
-        <div class="character-circle character-after"><img v-if="this.level > 2" :src="preprevLevel" alt="character"></div>
+        <div class="character-circle character-after"><img v-if="level > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
     <div class="text-account">
@@ -28,7 +28,6 @@
   import Footer from '../components/Footer.vue';
 
 const userStore = useUserStore();
-console.log(userStore.profile);
 
 const level = ref(1);
 
@@ -50,6 +49,8 @@ const level = ref(1);
     avatar_url.value = userStore.profile.avatar_url;
     userEmail.value = userStore.user.email.split("@")[0];
     getUser = useUserStore().user;
+    
+    console.log(userStore.profile);
   }
 
   async function signOut() {
