@@ -3,7 +3,7 @@
     <div v-if="!done">
         <div class="item-title">
             <h3>{{random}}</h3>
-            <button id="done" @click="emit('hideTask')">Done</button>
+            <button id="done" @click="retoDone()">Done</button>
         </div>        
         <p>{{task.description}}</p>
     </div>
@@ -36,6 +36,7 @@
 import { ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
+import { useUserStore } from "../stores/user";
 
 // const name = ref(random);
 const description = ref(props.task.description);
@@ -50,6 +51,12 @@ const emit = defineEmits(["getTasks", "hideTask"]);
 const props = defineProps({
     task: Object,
 });
+
+const retoDone = async () => {
+    emit('hideTask');
+    await useUserStore().levelUp();
+    await useUserStore().fetchUser();
+}
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async() => {
