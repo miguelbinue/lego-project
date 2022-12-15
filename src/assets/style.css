@@ -581,36 +581,34 @@ video{
 
 
 /* ACCOUNT */
-.text-account {
-    text-align: center;
-}
 
 .account-character-name {
     font-size: 50px;
-    margin: -152px 0 0 0;
+    margin: -117px 0 0 0;
     z-index: 60;
-    color: rgb(255 204 0)
+    color: rgb(255 204 0);
 }
 
 .account-box-name {
-    width: 36%;
-    margin-left: 24%;
+    width: 34.2%;
+    margin-left: 25.7%;
 }
 
 .account-box-level {
-    width: 16%;
-    margin-left: 2%;
+    width: 16.4%;
+    margin-left: 1%;
     display: flex;
     justify-content: center;
 }
 
 .account-name {
-    font-size: 50px;
+    font-size: 33px;
 }
 
 .account-level {
     margin: 0;
-    font-size: 120px;
+    font-size: 45px;
+    color: white;
 }
 
 .content-account {
@@ -621,10 +619,11 @@ video{
 }
 
 .text-account {
-    margin-top: 258px;
+    margin-top: 243px;
     display: flex;
     align-items: center;
-    width: 100%
+    width: 100%;
+    text-align: center;
 
 }
 
@@ -633,7 +632,7 @@ video{
 }
 
 .character-box img {
-    width: 100%;
+    width: 81.4%;
 }
 
 .character-circle{
@@ -676,7 +675,7 @@ video{
 }
 
 .screen-character {
-    width: 44%;
+    /* width: 44%;
     height: 341px;
     background-color: #222222;
     position: absolute;
@@ -685,8 +684,21 @@ video{
     z-index: 5;
     border-radius: 5px;
     border-radius: 50px;
-    border: 6px solid #3e3e3e;
+    border: 6px solid #3e3e3e; */
+
+        /* width: 44%; */
+    /* height: 341px; */
+    /* background-color: #222222; */
+    position: absolute;
+    display: flex;
+    top: 129px;
+    z-index: 5;
+    /* border-radius: 5px; */
+    /* border-radius: 50px; */
+    /* border: 6px solid #3e3e3e;
+*/
 }
+
 
 
 
