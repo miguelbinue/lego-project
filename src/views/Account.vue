@@ -48,7 +48,6 @@ const userLevel = ref(null);
 
   onMounted(() => {
     getProfile();
-    levelProgresion(characterArr);
   });
 
   async function getProfile() {
@@ -58,14 +57,8 @@ const userLevel = ref(null);
     userEmail.value = userStore.user.email.split("@")[0];
     userLevel.value = userStore.profile.level;
     getUser = useUserStore().user;
-    
-    console.log(userStore.profile);
         
-    
-    console.log("Level Progr" + characterArr[0].id);
-    // console.log(levelProgresion(characterArr[0]));
-
-    // console.log("Id del userlevel" + userLevel.value);
+    levelProgresion(characterArr);
   }
 
   getProfile();

@@ -16,9 +16,23 @@ export const useUserStore = defineStore("user", {
           .match({ id: this.user.id });
 
         if (profile) this.profile = profile[0];
-        console.log("user in store: ", this.user);
-        console.log("profile in store: ", this.profile);
+        // console.log("user in store: ", this.user);
+        // console.log("profile in store: ", this.profile);
       }
+    },
+
+    async levelUp() {
+      const { data: profiles } = await supabase
+        .from("profiles")
+        .update([
+          {
+            level: this.profile.level + 1,
+          },
+        ])
+        .match({
+          id: this.user.id,
+        });
+      console.log("leveling up!" + this.profile.level);
     },
 
     async signUp(email, password) {
