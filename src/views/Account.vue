@@ -83,142 +83,142 @@ function nextLevel() {
 //Array of LEGO characters
 const characterArr = [
   {
-    title: "harryPotter",
-    image: [("../../assets/images/mecabricks/harry-potter.png")],
+    title: "Boy",
+    image: [("../../assets/images/mecabricks/boy1.png")],
     id: 0
   },
   {
-    title: "ironman",
+    title: "Ironman",
     image: [("../../assets/images/mecabricks/iron-man.png")],
     id: 1
   },
   {
-    title: "hulk",
+    title: "Hulk",
     image: [("../../assets/images/mecabricks/hulk.png")],
     id: 2
   },
   {
-    title: "aquaman",
+    title: "Aquaman",
     image: [("../../assets/images/mecabricks/aquaman.png")],
     id: 3
   },
   {
-    title: "barney",
+    title: "Barney",
     image: [("../../assets/images/mecabricks/barney.png")],
     id: 4
   },
   {
-    title: "batman",
+    title: "Batman",
     image: [("../../assets/images/mecabricks/batman.png")],
     id: 5
   },
   {
-    title: "boy1",
-    image: [("../../assets/images/mecabricks/boy1.png")],
+    title: "Harry Potter",
+    image: [("../../assets/images/mecabricks/harry-potter.png")],
     id: 6
   },
   {
-    title: "captainamerica",
+    title: "Captain America",
     image: [("../../assets/images/mecabricks/captainamerica.png")],
     id: 7
   },
   {
-    title: "constructor",
+    title: "Constructor",
     image: [("../../assets/images/mecabricks/constructor.png")],
     id: 8
   },
   {
-    title: "darth-vader",
+    title: "Darth Vader",
     image: [("../../assets/images/mecabricks/darth-vader.png")],
     id: 9
   },
   {
-    title: "giant",
+    title: "Giant",
     image: [("../../assets/images/mecabricks/giant.png")],
     id: 10
   },
   {
-    title: "godric-griffindor",
+    title: "Godric Griffindor",
     image: [("../../assets/images/mecabricks/godric-griffindor.png")],
     id: 11
   },
   {
-    title: "harley-quinn",
+    title: "Harley Quinn",
     image: [("../../assets/images/mecabricks/harley-quinn.png")],
     id: 12
   },
   {
-    title: "hermione",
+    title: "Hermione",
     image: [("../../assets/images/mecabricks/hermione.png")],
     id: 13
   },
   {
-    title: "joey",
+    title: "Joey Tribbiani",
     image: [("../../assets/images/mecabricks/joey.png")],
     id: 14
   },
   {
-    title: "picapiedra",
+    title: "Pedro Picapiedra",
     image: [("../../assets/images/mecabricks/picapiedra.png")],
     id: 15
   },
   {
-    title: "pilotgirl",
+    title: "Pilot Girl",
     image: [("../../assets/images/mecabricks/pilotgirl.png")],
     id: 16
   },
   {
-    title: "porsche-pilot",
+    title: "Porsche Pilot",
     image: [("../../assets/images/mecabricks/porschepilot.png")],
     id: 17
   },
   {
-    title: "ronweasley",
+    title: "Ron Weasley",
     image: [("../../assets/images/mecabricks/ron-wheasley.png")],
     id: 18
   },
   {
-    title: "spiderman",
+    title: "Spiderman",
     image: [("../../assets/images/mecabricks/spiderman.png")],
     id: 19
   },
   {
-    title: "stormtrooper",
+    title: "Stormtrooper",
     image: [("../../assets/images/mecabricks/stormtrooper.png")],
     id: 20
   },
   {
-    title: "superman",
+    title: "Superman",
     image: [("../../assets/images/mecabricks/superman.png")],
     id: 21
   },
   {
-    title: "theflash",
+    title: "The Flash",
     image: [("../../assets/images/mecabricks/theflash.png")],
     id: 22
   },
   {
-    title: "tonystark",
+    title: "Tony Stark",
     image: [("../../assets/images/mecabricks/tonystark.png")],
     id: 23
   },
   {
-    title: "wilma",
+    title: "Wilma Picapiedra",
     image: [("../../assets/images/mecabricks/wilma.png")],
     id: 24
   },
   {
-    title: "windu",
+    title: "Windu",
     image: [("../../assets/images/mecabricks/windu.png")],
     id: 25
   },
   {
-    title: "wolverine",
+    title: "Wolverine",
     image: [("../../assets/images/mecabricks/wolverine.png")],
     id: 26
   },
   {
-    title: "wonderwoman",
+    title: "Wonderwoman",
     image: [("../../assets/images/mecabricks/wonderwoman.png")],
     id: 27
   },

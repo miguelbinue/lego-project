@@ -13,7 +13,7 @@
     export default {
 
         data() {
-            isHard: true;
+            // isHard: true;
             return {
                 timerCountHard: 15,
                 timerCountEasy: 10,
@@ -44,9 +44,9 @@
                 },
                 immediate: true // This ensures the watcher is triggered upon creation
             },
-            props: [
-                'isHard'
-            ]
+            // props: [
+            //     'isHard'
+            // ]
                 
             
         }
