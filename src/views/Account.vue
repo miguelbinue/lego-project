@@ -5,9 +5,9 @@
     <h2 class="account-character-name">{{name}}</h2>
     <div class="character-box">
       <div class="levels">
-        <div class="character-circle character-before"><img v-if="this.level > 1" :src="prevLevel" alt="character"></div>
+        <div class="character-circle character-before"><img v-if="level > 1" :src="prevLevel" alt="character"></div>
         <div class="character-circle character-main"><img :src="array" alt="character"></div>
-        <div class="character-circle character-after"><img v-if="this.level > 2" :src="preprevLevel" alt="character"></div>
+        <div class="character-circle character-after"><img v-if="level > 2" :src="preprevLevel" alt="character"></div>
       </div>
     </div>
     <div class="screen-character"></div>
@@ -35,8 +35,10 @@
   import VideoAccount from '../components/VideoAccount.vue';
 const userStore = useUserStore();
 
-  const getUser = useUserStore().user;
-  const userEmail = getUser.email;
+const level = ref(1);
+
+  let getUser = null;
+  const userEmail = ref(null);
 
   const loading = ref(false);
   const username = ref(null);
@@ -51,6 +53,10 @@ const userStore = useUserStore();
     await userStore.fetchUser();
     username.value = userStore.profile.username;
     avatar_url.value = userStore.profile.avatar_url;
+    userEmail.value = userStore.user.email.split("@")[0];
+    getUser = useUserStore().user;
+    
+    console.log(userStore.profile);
   }
 
   async function signOut() {
@@ -214,7 +220,7 @@ const characterArr = [
   },
   
 ];
-let level = ref(1);
+
 let array = ref();
 let prevLevel = ref();
 let preprevLevel = ref();
