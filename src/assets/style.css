@@ -1,0 +1,814 @@
+:root {
+    --colorWhite: #ffffff;
+    --colorBlack: #000000;
+    --colorRed: red;
+    --fontSize-sm: 16px;
+    --fontFamily: 'Arial, Helvetica, sans-serif';
+    --fontTitle: 'Arial';
+    --fontBody: 'Helvetica';
+}
+
+h1 {
+    color: var(--colorRed);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0px;
+    height: 100vh;
+}
+.container{
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* SignIn Component */
+
+.signin{
+    background: url("../../assets/images/lego-signin.circle.png") center;
+    width: 868px;
+    height: 100%;
+}
+
+.signup-container{
+    background-image: url("../../assets/images/lego-signup.203.png");
+}
+
+.signin-container{
+    background-image: url("../../assets/images/lego-signin.198.png");
+}
+
+/* Muñequitos lego q se asoman */
+
+#f1{    
+    width: 384px;
+    height: 216px;
+    z-index: 0;
+    position: absolute;
+    left: 17%;
+    top: -33%;
+    right: auto;
+    bottom: auto;
+    background: none;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+#f1:hover{
+    transform: translate(0, -110px);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#f2{
+    width: 216px;
+    height: 384px;
+    z-index: 0;
+    position: absolute;
+    right: 65%;
+    top: 32%;
+    left: auto;
+    bottom: auto;
+    background: none;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+    /* transform: rotate(-90deg); */
+}
+
+#f2:hover{
+    transform: translate(-135px, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#f3{
+    width: 216px;
+    height: 384px;
+    z-index: 0;
+    position: absolute;
+    right: 24%;
+    top: 34%;
+    left: auto;
+    bottom: auto;
+    background: none;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+    /* transform: rotate(90deg); */
+}
+
+#f3:hover{
+    transform: rotate(180deg);
+    transform: translate(125px, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#f4{
+    width: 384px;
+    height: 216px;
+    z-index: 0;
+    position: absolute;
+    right: 18%;
+    top: 66%;
+    left: auto;
+    bottom: auto;
+    background: none;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+    /* transform: rotate(180deg); */
+}
+
+#f4:hover{
+    transform: translate(0, 110px);
+    transition: all 0.3s ease-in-out;
+}
+
+.box{
+    /* background-color: rgb(153, 153, 153); */
+    /* padding: 50px 90px; */
+    border-radius: 60px;
+    display: block;
+    position: relative;
+}
+
+.content-box {
+    padding: 50px 90px;
+    border-radius: 60px;
+    display: flex;
+    position: relative;
+    background-position: center;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* .signin-container .content-box{
+    background-image: url("../../assets/images/lego-signin.circle.png");
+}
+
+.signup-container .content-box{
+    background-image: url("../../assets/images/lego-signup.circle.png");
+} */
+
+#sign-in {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.header-title {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+.header-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 60%);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.input-field {
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0px;
+    padding: 12px 130px 12px 20px;
+}
+
+.form{
+    margin-top: 183px;
+    height: 500px;
+}
+
+.sign{
+    background-color: #10101010;
+    outline: none;
+    color: white;
+}
+
+.form-input ::placeholder{
+    color: rgba(255, 255, 255, 0.434);
+}
+
+.button-signin {
+    border: none;
+    background: none;
+    border-radius: 0;
+    padding: 38px 97px;
+    margin: 108px 0 43px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.button-signup {
+    border: none;
+    background: none;
+    border-radius: 0;
+    padding: 38px 97px;
+    margin: 82px 0 43px 0;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.header-description {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.form-sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 52px;
+}
+
+.form-sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.form-sign-in p{
+    text-align: center;
+}
+
+.sign-up-link {
+    text-decoration: none;
+    color: rgb(255, 120, 120);
+    font-weight: bold;
+}
+p {
+    color: rgba(255, 255, 255, 60%);
+    margin-bottom: 0;
+}
+
+
+/* SignUp Component */
+
+.signup{
+    background: url("../../assets/images/lego-signup.circle.png") center;
+    width: 868px;
+    height: 100%;
+}
+
+/* Nav */
+
+hr{
+    width: 80%;
+    border-top: 1px;
+    opacity: 30%;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav li{
+    margin: 0 10px;
+}
+
+.log-out-welcome p{
+    margin-top: 0px;
+}
+
+ul button{
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(255, 120, 120);
+    color: white;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(255, 207, 0);
+    padding: 0.9% 0;
+    height: 65px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+nav p{
+    color: rgb(0, 0, 0);
+}
+
+/* Footer */
+
+.footer{
+    bottom: 0%;
+    position: absolute;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.footer img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+
+/* Home view */
+
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+}
+
+#source{
+    position: fixed;
+    z-index: -100;
+}
+
+.wrapper{
+    /* background-clip: url("/assets/videos/lego.day.mp4"); */
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.tachado{
+    text-decoration: line-through;
+}
+
+
+/* Task Item */
+.container-item{
+    /* padding: 25px;
+    margin: 25px;
+    width: 80%;
+    box-shadow: 5px 5px 15px 0 rgb(20 20 20 / 30%);
+    border-radius: 10px;
+    border-left-color: rgb(255, 120, 120);
+    border-left-style: solid;
+    border-left-width: 10px;
+     */
+
+    background-color: rgb(189, 204, 212);
+
+    width: 39%;
+    height: 39%;
+    top: 30.5%;
+    position: absolute;
+    display: flex;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+}
+.container-item p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.item-title{
+    display: flex;
+    justify-content: space-between;
+}
+.item-title button{
+    height: 30px;
+}
+.item-title h3{
+    font-size: 30px;
+    margin: 0;
+}
+
+.modify-task{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-title button{
+    border: none;
+    background-color: rgb(255, 120, 120);
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modify-task button{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.save-button{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* New Task */
+
+#pantallaCentral{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: -webkit-center;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-color {
+    background-color: none;
+    /* display: flex;
+    flex-direction: column;
+    height: 1080px;
+    position: relative;
+    overflow: hidden; */
+    flex-direction: column;
+    position: relative;
+    height: 1080px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-task-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    margin-top: -10%;
+}
+
+.new-task-title {
+    color: rgb(212 212 212);
+    font-size: 50px;
+    /* margin-left: 15%; */
+    margin-top: 50px;
+}
+.upper-color .input-field {
+    background-color: none;
+}
+.input-field input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    font-size: 20px;
+}
+.input-field ::placeholder {
+    color: rgb(0, 0, 0);
+}
+.new-task-input {
+    padding-bottom: 60px;
+    /* margin-left: 15%; */
+}
+.new-task-input button {
+    border-radius: 10px;
+    border: none;
+    padding: 15px 50px;
+    background-color: rgb(255, 120, 120);
+    color: white;
+    font-weight: bold;
+    margin: 40px 20px 10px 20px;
+    font-size: 20px;
+}
+
+/* #newTask{
+    background-color: #cfcfcf;
+    height: 419px;
+    width: 743px;
+    margin-top: 10.5%;
+} */
+
+#newTask {
+    background-color: #222222;
+    height: 419px;
+    width: 743px;
+    position: absolute;
+    top: 30.5%;
+  }
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+
+/* ACCOUNT */
+.text-account {
+    text-align: center;
+}
+
+.account-character-name {
+    font-size: 50px;
+    margin: -152px 0 0 0;
+    z-index: 60;
+    color: rgb(255 204 0)
+}
+
+.account-box-name {
+    width: 36%;
+    margin-left: 24%;
+}
+
+.account-box-level {
+    width: 16%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.account-name {
+    font-size: 50px;
+}
+
+.account-level {
+    margin: 0;
+    font-size: 120px;
+}
+
+.content-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%
+}
+
+.text-account {
+    margin-top: 258px;
+    display: flex;
+    align-items: center;
+    width: 100%
+
+}
+
+.button-level {
+    /* display: none; */
+}
+
+.character-box img {
+    width: 100%;
+}
+
+.character-circle{
+    display: block;
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    top: -97px;
+}
+
+.levels{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;  
+    align-items: center;  
+    margin-top: 94px;
+}
+
+.character-main {
+    z-index: 10;
+    margin: 0 4%;
+    
+}
+
+.character-after {
+    margin-left: 15%;
+    opacity: 30%;
+    z-index: 9;
+}
+
+.character-before {
+    margin-left: -15%;
+    opacity: 30%;
+    z-index: 9;
+}
+
+.character-box {
+    width: 100%;
+}
+
+.screen-character {
+    width: 44%;
+    height: 341px;
+    background-color: #222222;
+    position: absolute;
+    display: flex;
+    top: 129px;
+    z-index: 5;
+    border-radius: 5px;
+    border-radius: 50px;
+    border: 6px solid #3e3e3e;
+}
+
+
+
+/* MOVIL  */
+@media (max-width: 420px){
+
+    .items{
+        grid-template-columns: 75%;
+    }
+
+    .new-task-block{
+        flex-direction: column;
+    }
+
+    .new-task-input{
+        margin-left: 7%;
+    }
+
+    .log-out-welcome{
+        display: none;
+    }
+
+    img{
+        width: 70%;
+        margin-top: 0;
+    }
+
+    .box{
+        width: 95%;
+    }
+
+    #f2{
+        display: none;
+    }
+    #f3{
+        display: none;
+    }
+}
+
+/* IPAD */
+@media (max-height: 821px){
+    .upper-color{
+        height: 820px;
+    }
+
+    #newTask{
+        height: 320px;
+        width: 568px;
+    }
+
+    nav{
+        margin-bottom: 35px;
+        margin-top: -17px;
+    }
+
+    /* SIGN IN */
+    .signin{
+        background: url(/assets/images/lego-signin.circle-ipad.png) center;
+        width: 660px;
+    }
+
+    .form {
+        margin-top: 100px;
+        height: 426px;
+    }
+
+    .input-field{
+        padding: 12px 60px 12px 12px;
+    }
+
+    .button-signin{
+        margin: 68px 0 8px 0;
+        padding: 30px 75px;
+    }
+
+    .form-sign-in p{
+        max-width: 150px;
+    }
+
+    #f2{
+        right: 66%;
+        top: 26%;
+    }
+
+    #f2:hover {
+        transform: translate(-130px, 0);
+    }
+
+    #f3{
+        right: 16%;
+        top: 27%;
+    }
+
+    #f3:hover {
+        transform: translate(120px, 0);
+    }
+    
+    /* SIGN UP */
+    .signup{
+        background: url(/assets/images/lego-signup.circle-ipad.png) center;
+        width: 660px;
+    }
+
+    .form-sign-up{
+        margin-top: 69px;
+    }
+
+    .signup .form-input{
+        margin: -2px;
+    }
+
+    .signup .input-field{
+        padding: 8px 60px 8px 12px;
+    }
+
+    .button-signup{
+        margin: 60px 0 18px 0;
+        padding: 30px 75px;
+    }
+
+    .form-sign-up p{
+        max-width: 150px;
+        text-align: center;
+    }
+    
+}
