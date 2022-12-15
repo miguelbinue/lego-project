@@ -10,7 +10,7 @@
     </div>
     <div class="text-account">
       <h2 class="account-character-name">{{name}}</h2>
-      <h1 class="account-name">Name: {{userEmail.split("@")[0]}}</h1>
+      <h1 class="account-name">Name: {{userEmail}}</h1>
       <h2 class="account-level">level: {{level}}</h2>
       <button v-on:click="nextLevel()">Level Up</button>
     </div>
@@ -28,9 +28,12 @@
   import Footer from '../components/Footer.vue';
 
 const userStore = useUserStore();
+console.log(userStore.profile);
 
-  const getUser = useUserStore().user;
-  const userEmail = getUser.email;
+const level = ref(1);
+
+  let getUser = null;
+  const userEmail = ref(null);
 
   const loading = ref(false);
   const username = ref(null);
@@ -45,6 +48,8 @@ const userStore = useUserStore();
     await userStore.fetchUser();
     username.value = userStore.profile.username;
     avatar_url.value = userStore.profile.avatar_url;
+    userEmail.value = userStore.user.email.split("@")[0];
+    getUser = useUserStore().user;
   }
 
   async function signOut() {
@@ -208,7 +213,7 @@ const characterArr = [
   },
   
 ];
-let level = ref(1);
+
 let array = ref();
 let prevLevel = ref();
 let preprevLevel = ref();
