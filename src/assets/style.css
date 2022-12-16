@@ -413,7 +413,7 @@ video{
 }
 
 .item-title h3{
-    font-size: 50px;
+    font-size: 45px;
     margin: 0;
     font-family: 'lego';
     text-transform: uppercase;
@@ -426,7 +426,7 @@ video{
 
 .item-title button{
     border: none;
-    background-color: rgb(255, 120, 120);
+    background-color: rgb(222, 0, 13);
     border-radius: 20px;
     padding: 5px 10px;
     color: white;
