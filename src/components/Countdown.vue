@@ -1,11 +1,11 @@
 <template>
-    <div >
+    <div class="time" v-if="timerCountHard > 0">
         {{ timerCountHard }}
     </div> 
     <!-- <div v-if="isHard == false">
         {{ timerCountEasy }}
     </div> -->
-    <div v-if="timerCountHard == 0">Time's Up! Try Again</div>
+    <div class="timeDone" v-if="timerCountHard == 0">Time's Up! Try Again</div>
 </template>
 
 <script>

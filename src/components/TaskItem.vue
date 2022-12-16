@@ -3,8 +3,10 @@
     <div v-if="!done">
         <div class="item-title">
             <h3>{{random}}</h3>
-            <Countdown/>
-            <button id="done" @click="retoDone()">Done</button>
+            <div class="timer">
+                <button id="done" @click="retoDone()">Done</button>
+                <Countdown/>
+            </div>
         </div>        
         <p>{{task.description}}</p>
     </div>
