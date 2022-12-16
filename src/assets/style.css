@@ -286,27 +286,27 @@ ul button{
     border-radius: 10px;
     border: none;
     padding: 10px 20px;
-    background-color: rgb(255, 120, 120);
-    color: white;
+    background-color: rgb(255, 207, 0);
+    color: #222222;
     font-weight: bold;
 }
 
 nav{
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(255, 207, 0);
+    background-color: #222222;
     padding: 0.9% 0;
     height: 65px;
 }
 
 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 207, 0);
     font-weight: bold;
 }
 
 nav p{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 207, 0);
 }
 
 /* Footer */
@@ -316,6 +316,7 @@ nav p{
     position: absolute;
     margin-bottom: 0;
     justify-content: center;
+    color: rgb(255, 207, 0);
 }
 
 .footer img{
@@ -593,26 +594,26 @@ video{
 
 .account-character-name {
     font-size: 50px;
-    margin: -117px 0 0 0;
+    margin: -214px 0 0 0;
     z-index: 60;
-    color: rgb(255 204 0 / 75%);
+    color: #717c8f;
 }
 
 .account-box-name {
-    width: 34.2%;
-    margin-left: 25.7%;
+    width: 24.2%;
+    margin-left: 31.7%;
 }
 
 .account-box-level {
-    width: 16.4%;
-    margin-left: 1%;
+    width: 6.7%;
+    margin-left: 6.2%;
     display: flex;
     justify-content: center;
 }
 
 .account-name {
     font-size: 33px;
-    color: #ffffff6e;
+    color: rgb(255 207 0 / 73%);
 }
 
 .account-level {
@@ -629,7 +630,7 @@ video{
 }
 
 .text-account {
-    margin-top: 243px;
+    margin-top: 358px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -642,7 +643,7 @@ video{
 }
 
 .character-box img {
-    width: 81.4%;
+    width: 64.6%;
 }
 
 .character-circle{
@@ -669,13 +670,13 @@ video{
 }
 
 .character-after {
-    margin-left: 15%;
+    margin-left: 12%;
     opacity: 30%;
     z-index: 9;
 }
 
 .character-before {
-    margin-left: -15%;
+    margin-left: -12%;
     opacity: 30%;
     z-index: 9;
 }
@@ -778,8 +779,7 @@ video{
     }
 
     nav{
-        margin-bottom: 35px;
-        margin-top: -17px;
+        height: 54px;
     }
 
     /* SIGN IN */
@@ -851,5 +851,32 @@ video{
         max-width: 150px;
         text-align: center;
     }
+
+    /* ACCOUNT  */
+    .account-character-name {
+        margin: -110px 0 0 0;
+        font-size: 40px;
+    }
     
+    .character-circle {
+        width: 50%;
+    }
+
+    .text-account {
+        margin-top: 248px;
+    }
+
+    .account-name {
+        font-size: 26px;
+    }
+
+    .account-box-name {
+        width: 21.2%;
+        margin-left: 31.7%;
+    }
+
+    .account-box-level {
+        width: 7.7%;
+        margin-left: 12.4%;
+    }
 }

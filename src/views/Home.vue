@@ -1,8 +1,10 @@
 <template>
   
-  
+  <div v-if="isActive">Hola</div>
       <!-- <div class="video"> -->
-  <Video/>   
+  <VideoDark/> 
+  <Video/> 
+  
   <!-- <div class="wrapper"> -->
     
     <!-- <div class="upper-color"> -->
@@ -35,7 +37,9 @@ import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
 import Video from '../components/video.vue';
+import VideoDark from '../components/VideoDark.vue';
 import Footer from '../components/Footer.vue';
+import isActive from '../components/NewTask.vue'
 
 const taskStore = useTaskStore();
 
@@ -60,6 +64,8 @@ const hideTask = async () => {
 }
 
 getTasks();
+
+console.log(isActive);
 
 </script>
 
