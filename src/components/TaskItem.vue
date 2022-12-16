@@ -9,17 +9,6 @@
             </div>
         </div>        
     </div>
-    <!-- <div v-else class="tachado">
-        <div class="item-title">
-            <h3>{{task.title}}</h3>
-            <button id="done" @click="taskDone">Undone</button>
-        </div>   
-        <p>{{task.description}}</p>
-    </div> -->
-    <!-- <div class="modify-task">
-        <button id="edit" @click="(openEdit = !openEdit)">Edit</button>
-        <button @click="deleteTask">Delete</button>
-    </div> -->
     
     <div action="#" v-show="!openEdit">
         <div class="input-field">
@@ -106,7 +95,6 @@ const randomDetail = [
     " Follow the playground",
     " Replace the playground",
     " Do it yourself",
-    // " {{randomChallenge}} with {{randomChallenge}}",
 ]
 
 const randomIndex = Math.floor(Math.random() * randomChallenge.length)
