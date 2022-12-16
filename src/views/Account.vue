@@ -103,7 +103,7 @@ const characterArr = [
     id: 3
   },
   {
-    title: "Barney",
+    title: "Pablo Mármol",
     image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193202/LEGO%20Playground/sunny-faces/barney_viz1cm.png",
     id: 4
   },

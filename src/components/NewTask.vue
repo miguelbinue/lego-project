@@ -1,21 +1,11 @@
 <template>
     <div id="newTask">
         <img src="../../assets/images/lego-head.png" alt="Lego Head">
-        <!-- <h1 class="new-task-title">Nuevo reto!</h1> -->
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
         </div>
         <div class="new-task-input">
-            <!-- <div class="input-field">
-                <input type="text" placeholder="Selecciona dificultad" v-model="name">
-            </div> -->
-
-            <!-- <p>Selecciona dificultad: </p> -->
             <button class="ui button big toggle" :class="{active:isActive}" @click="toggle()">{{isActive ? 'EASY' : 'HARD'}}</button>
-
-            <!-- <div class="input-field">
-                <input type="text" placeholder="Description" v-model="description">
-            </div> -->
             <button @click="addTask" class="button">Leggo!</button>
         </div>
     </div>
@@ -40,21 +30,14 @@ const errorMessage = ref(null);
 
 const tasks = ref([]);
 
-let isActive = ref(false);
+const prop = defineProps(["isActive"]);
 
-const emit = defineEmits(["emitTask"]);
+const emit = defineEmits(["emitTask", "changeActive"]);
 
 const isHard = ref(true);
 
-// function toggle() {
-//    this.isActive = !this.enable;
-// }
-
 const toggle = async () => {
-    isActive.value = isActive.value ? false : true;
-    // console.log("Is Active " + isActive.value);
-    // isHard.value = !isHard.value;
-    // console.log("Is Hard " + isHard.value);
+    emit("changeActive");
 }
 
 // Arrow function para crear tareas.
