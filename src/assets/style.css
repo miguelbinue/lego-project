@@ -374,16 +374,6 @@ video{
 
 /* Task Item */
 .container-item{
-    /* padding: 25px;
-    margin: 25px;
-    width: 80%;
-    box-shadow: 5px 5px 15px 0 rgb(20 20 20 / 30%);
-    border-radius: 10px;
-    border-left-color: rgb(255, 120, 120);
-    border-left-style: solid;
-    border-left-width: 10px;
-     */
-
     background-color: rgb(189, 204, 212);
 
     width: 39%;
@@ -395,10 +385,6 @@ video{
     justify-content: center;
     align-items: center;
 }
-.container-item p{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
 
 .item-title{
     display: flex;
@@ -409,6 +395,8 @@ video{
 .item-title h3{
     font-size: 50px;
     margin: 0;
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 .modify-task{
@@ -427,6 +415,8 @@ video{
     height: 90px;
     width: 120px;
     font-size: 30px;
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 .modify-task button{
@@ -439,22 +429,12 @@ video{
     font-weight: bold;
 }
 
-.save-button{
-    border: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin-top: 10px;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-}
-
 .timer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 130px;
+    margin-top: 25px;
 }
 
 .time{
@@ -467,6 +447,8 @@ video{
     color: rgb(193 36 36);
     font-weight: bold;
     margin-left: 15px;
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 
@@ -534,7 +516,6 @@ video{
     color: rgb(0, 0, 0);
 }
 .new-task-input {
-    /* padding-bottom: 60px; */
     display: flex;
     justify-content: center;
 }
@@ -547,6 +528,8 @@ video{
     font-weight: bold;
     margin: 55px 20px 10px 20px;
     font-size: 50px;
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 .new-task-input button:first-child{
@@ -562,8 +545,8 @@ video{
 
 #newTask {
     background-color: #222222;
-    height: 419px;
-    width: 743px;
+    height: 421px;
+    width: 748px;
     position: absolute;
     top: 30.5%;
 }
