@@ -103,7 +103,7 @@ const characterArr = [
     id: 3
   },
   {
-    title: "Barney",
+    title: "Pablo Mármol",
     image: [("../../assets/images/mecabricks/barney.png")],
     id: 4
   },

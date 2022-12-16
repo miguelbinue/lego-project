@@ -1,9 +1,9 @@
 <template>
   
-  <div v-if="isActive">Hola</div>
+  <!-- <div v-if="isActive">Hola</div> -->
       <!-- <div class="video"> -->
-  <VideoDark/> 
-  <!-- <Video/>  -->
+  <VideoDark v-if="!isActive"/> 
+  <Video v-if="isActive"/> 
   
   <!-- <div class="wrapper"> -->
     
@@ -12,9 +12,9 @@
       <!-- </div> -->
       
       <div class="new-task-block">
-        <div id="pantallaCentral"><NewTask v-if="!showTask" @emitTask="getNewTask"/></div>
+        <div id="pantallaCentral"><NewTask v-if="!showTask" :isActive="isActive" @emitTask="getNewTask" @changeActive = "changeActive"/></div>
 
-        <TaskItem @hideTask="hideTask" v-if="showTask" :task="created"/>
+        <TaskItem @hideTask="hideTask" v-if="showTask" :task="created" :isActive="isActive"/>
       </div>
 
       <!-- <div>
@@ -39,7 +39,7 @@ import TaskItem from '../components/TaskItem.vue';
 import Video from '../components/video.vue';
 import VideoDark from '../components/VideoDark.vue';
 import Footer from '../components/Footer.vue';
-import isActive from '../components/NewTask.vue'
+// import isActive from '../components/NewTask.vue'
 
 const taskStore = useTaskStore();
 
@@ -61,6 +61,12 @@ const getNewTask = async (task) => {
 
 const hideTask = async () => {
   showTask.value = false;
+}
+
+const isActive = ref(false);
+
+const changeActive = async () => {
+  isActive.value = isActive.value ? false : true;
 }
 
 getTasks();

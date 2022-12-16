@@ -40,9 +40,11 @@ const errorMessage = ref(null);
 
 const tasks = ref([]);
 
-let isActive = ref(false);
+// let isActive = ref(false);
 
-const emit = defineEmits(["emitTask"]);
+const prop = defineProps(["isActive"]);
+
+const emit = defineEmits(["emitTask", "changeActive"]);
 
 const isHard = ref(true);
 
@@ -51,8 +53,10 @@ const isHard = ref(true);
 // }
 
 const toggle = async () => {
-    isActive.value = isActive.value ? false : true;
-    // console.log("Is Active " + isActive.value);
+    emit("changeActive");
+    // console.log(isActive);
+    // isActive.value = isActive.value ? false : true;
+    // console.log("Is Active " + prop.isActive);
     // isHard.value = !isHard.value;
     // console.log("Is Hard " + isHard.value);
 }

@@ -1,14 +1,44 @@
 <template>
-    <div class="time" v-if="timerCountHard > 0">
+    <div class="time" v-if="timerCountHard > 0 && !isActive">
         {{ timerCountHard }}
     </div> 
-    <!-- <div v-if="isHard == false">
+    <div class="time" v-if="timerCountEasy > 0 &&isActive">
         {{ timerCountEasy }}
-    </div> -->
-    <div class="timeDone" v-if="timerCountHard == 0">Time's Up! Try Again</div>
+    </div>
+    <div class="timeDone" v-if="(isActive &&timerCountEasy == 0 ) || (!isActive && timerCountHard == 0)">TIME'S UP! Try Again</div>
 </template>
 
-<script>
+<script setup>
+import { ref, watch } from 'vue';
+
+const timerCountHard = ref(5);
+const timerCountEasy = ref(10);
+
+const props = defineProps(["isActive"]);
+
+watch(timerCountEasy, () => {
+    if (timerCountEasy.value > 0) {
+        setTimeout(() => {
+            timerCountEasy.value--;
+        }, 1000);
+    }
+}, {immediate: true});
+
+watch(timerCountHard, () => {
+    if (timerCountHard.value > 0) {
+        setTimeout(() => {
+            timerCountHard.value--;
+        }, 1000);
+    }
+}, {immediate: true});
+
+// watch(props.isActive, () => {
+    console.log("is active: " + props.isActive);
+// })
+
+</script>
+
+<!-- <script>
 
     export default {
 
@@ -19,7 +49,6 @@
                 timerCountEasy: 10,
             }
         },
-
         watch: {
 
             timerCountHard: {
@@ -43,13 +72,12 @@
 
                 },
                 immediate: true // This ensures the watcher is triggered upon creation
-            },
-            // props: [
-            //     'isHard'
-            // ]
-                
+            }    
             
+        },
+        props: {
+            isActive: Boolean,
         }
     }
 
-</script>
+</script> -->
