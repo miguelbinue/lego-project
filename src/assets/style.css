@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'lego';
+    src: url('../../assets/fonts/Legothick.ttf');
+}
 :root {
     --colorWhite: #ffffff;
     --colorBlack: #000000;
@@ -6,6 +10,7 @@
     --fontFamily: 'Arial, Helvetica, sans-serif';
     --fontTitle: 'Arial';
     --fontBody: 'Helvetica';
+    
 }
 
 h1 {
@@ -609,9 +614,11 @@ video{
 
 .account-character-name {
     font-size: 50px;
-    margin: -214px 0 0 0;
+    margin: -201px 0 0 0;
     z-index: 60;
     color: #717c8f;
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 .account-box-name {
@@ -621,7 +628,7 @@ video{
 
 .account-box-level {
     width: 6.7%;
-    margin-left: 6.2%;
+    margin-left: 6.1%;
     display: flex;
     justify-content: center;
 }
@@ -629,12 +636,15 @@ video{
 .account-name {
     font-size: 33px;
     color: rgb(255 207 0 / 73%);
+    font-family: 'lego';
+    text-transform: uppercase;
 }
 
 .account-level {
     margin: 0;
     font-size: 45px;
     color: #3e8e41;
+    font-family: lego;
 }
 
 .content-account {
@@ -645,7 +655,7 @@ video{
 }
 
 .text-account {
-    margin-top: 358px;
+    margin-top: 363px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -869,7 +879,7 @@ video{
 
     /* ACCOUNT  */
     .account-character-name {
-        margin: -110px 0 0 0;
+        margin: -101px 0 0 0;
         font-size: 40px;
     }
     
@@ -878,7 +888,7 @@ video{
     }
 
     .text-account {
-        margin-top: 248px;
+        margin-top: 254px;
     }
 
     .account-name {
@@ -892,6 +902,6 @@ video{
 
     .account-box-level {
         width: 7.7%;
-        margin-left: 12.4%;
+        margin-left: 12.1%;
     }
 }
