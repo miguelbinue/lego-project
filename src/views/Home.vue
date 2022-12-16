@@ -3,7 +3,7 @@
   <div v-if="isActive">Hola</div>
       <!-- <div class="video"> -->
   <VideoDark/> 
-  <!-- <Video/>  -->
+  <Video/> 
   
   <!-- <div class="wrapper"> -->
     
