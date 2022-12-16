@@ -1,6 +1,7 @@
 <template>
     <div id="newTask">
-        <h1 class="new-task-title">Nuevo reto!</h1>
+        <img src="../../assets/images/lego-head.png" alt="Lego Head">
+        <!-- <h1 class="new-task-title">Nuevo reto!</h1> -->
         <div v-if="showErrorMessage">
             <p class="error-text">{{ errorMessage }}</p>
         </div>
@@ -15,7 +16,7 @@
             <!-- <div class="input-field">
                 <input type="text" placeholder="Description" v-model="description">
             </div> -->
-            <button @click="addTask" class="button">Create</button>
+            <button @click="addTask" class="button">Leggo!</button>
         </div>
     </div>
     
@@ -52,7 +53,7 @@ const isHard = ref(true);
 const toggle = async () => {
     isActive.value = isActive.value ? false : true;
     // console.log("Is Active " + isActive.value);
-    isHard.value = !isHard.value;
+    // isHard.value = !isHard.value;
     // console.log("Is Hard " + isHard.value);
 }
 
