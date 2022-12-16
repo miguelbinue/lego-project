@@ -13,7 +13,9 @@
       <!-- </div> -->
       
       <div class="new-task-block">
-        <div id="pantallaCentral"><NewTask v-if="!showTask" :isActive="isActive" @emitTask="getNewTask" @changeActive = "changeActive"/></div>
+        <div id="pantallaCentral">
+          <NewTask v-if="!showTask" :isActive="isActive" @emitTask="getNewTask" @changeActive = "changeActive"/>
+        </div>
 
         <TaskItem @hideTask="hideTask" v-if="showTask" :task="created" :isActive="isActive"/>
       </div>
