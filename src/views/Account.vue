@@ -84,142 +84,142 @@ function nextLevel() {
 const characterArr = [
   {
     title: "Boy",
-    image: [("../../assets/images/mecabricks/boy1.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193203/LEGO%20Playground/sunny-faces/boy1_xsg469.png",
     id: 0
   },
   {
     title: "Ironman",
-    image: [("../../assets/images/mecabricks/iron-man.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/ironman_rrqp2q.png",
     id: 1
   },
   {
     title: "Hulk",
-    image: [("../../assets/images/mecabricks/hulk.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/hulk_ewj6uq.png",
     id: 2
   },
   {
     title: "Aquaman",
-    image: [("../../assets/images/mecabricks/aquaman.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193203/LEGO%20Playground/sunny-faces/aquaman_kunakn.png",
     id: 3
   },
   {
     title: "Pablo Mármol",
-    image: [("../../assets/images/mecabricks/barney.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193202/LEGO%20Playground/sunny-faces/barney_viz1cm.png",
     id: 4
   },
   {
     title: "Batman",
-    image: [("../../assets/images/mecabricks/batman.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193202/LEGO%20Playground/sunny-faces/batman_evcbda.png",
     id: 5
   },
   {
     title: "Harry Potter",
-    image: [("../../assets/images/mecabricks/harry-potter.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193204/LEGO%20Playground/sunny-faces/harry-potter_m5ckgx.png",
     id: 6
   },
   {
     title: "Captain America",
-    image: [("../../assets/images/mecabricks/captainamerica.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193202/LEGO%20Playground/sunny-faces/captainamerica_m5qna7.png",
     id: 7
   },
   {
     title: "Constructor",
-    image: [("../../assets/images/mecabricks/constructor.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193203/LEGO%20Playground/sunny-faces/constructor_qt5zq5.png",
     id: 8
   },
   {
     title: "Darth Vader",
-    image: [("../../assets/images/mecabricks/darth-vader.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193203/LEGO%20Playground/sunny-faces/darth-vader_x92gfe.png",
     id: 9
   },
   {
     title: "Giant",
-    image: [("../../assets/images/mecabricks/giant.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193203/LEGO%20Playground/sunny-faces/giant_n5ri8l.png",
     id: 10
   },
   {
-    title: "Godric Griffindor",
-    image: [("../../assets/images/mecabricks/godric-griffindor.png")],
+    title: "Godric",
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193204/LEGO%20Playground/sunny-faces/godric-griffindor_cv9tv5.png",
     id: 11
   },
   {
     title: "Harley Quinn",
-    image: [("../../assets/images/mecabricks/harley-quinn.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/harley-quinn_saligv.png",
     id: 12
   },
   {
     title: "Hermione",
-    image: [("../../assets/images/mecabricks/hermione.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193204/LEGO%20Playground/sunny-faces/hermione_eip4f9.png",
     id: 13
   },
   {
     title: "Joey Tribbiani",
-    image: [("../../assets/images/mecabricks/joey.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/joey_mmjfj8.png",
     id: 14
   },
   {
     title: "Pedro Picapiedra",
-    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671031375/LEGO%20Playground/mecabricks/picapiedra_z49uop.png",
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/picapiedra_ats2qz.png",
     id: 15
   },
   {
     title: "Pilot Girl",
-    image: [("../../assets/images/mecabricks/pilotgirl.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193205/LEGO%20Playground/sunny-faces/pilotogirl_bxd4pb.png",
     id: 16
   },
   {
     title: "Porsche Pilot",
-    image: [("../../assets/images/mecabricks/porschepilot.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193206/LEGO%20Playground/sunny-faces/porschepilot_lnqu1k.png",
     id: 17
   },
   {
     title: "Ron Weasley",
-    image: [("../../assets/images/mecabricks/ron-wheasley.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193206/LEGO%20Playground/sunny-faces/ron_phjuil.png",
     id: 18
   },
   {
     title: "Spiderman",
-    image: [("../../assets/images/mecabricks/spiderman.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193206/LEGO%20Playground/sunny-faces/spiderman_pxwj3h.png",
     id: 19
   },
   {
     title: "Stormtrooper",
-    image: [("../../assets/images/mecabricks/stormtrooper.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193206/LEGO%20Playground/sunny-faces/stormtrooper_bxkjds.png",
     id: 20
   },
   {
     title: "Superman",
-    image: [("../../assets/images/mecabricks/superman.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193207/LEGO%20Playground/sunny-faces/superman_ykbyad.png",
     id: 21
   },
   {
     title: "The Flash",
-    image: [("../../assets/images/mecabricks/theflash.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193206/LEGO%20Playground/sunny-faces/theflash_kazapa.png",
     id: 22
   },
   {
     title: "Tony Stark",
-    image: [("../../assets/images/mecabricks/tonystark.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193207/LEGO%20Playground/sunny-faces/tonystark_e3tpb6.png",
     id: 23
   },
   {
     title: "Wilma Picapiedra",
-    image: [("../../assets/images/mecabricks/wilma.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193207/LEGO%20Playground/sunny-faces/wilma_vlkyle.png",
     id: 24
   },
   {
     title: "Windu",
-    image: [("../../assets/images/mecabricks/windu.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193207/LEGO%20Playground/sunny-faces/windu_jd9err.png",
     id: 25
   },
   {
     title: "Wolverine",
-    image: [("../../assets/images/mecabricks/wolverine.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193208/LEGO%20Playground/sunny-faces/wolverine_xqcb4l.png",
     id: 26
   },
   {
     title: "Wonderwoman",
-    image: [("../../assets/images/mecabricks/wonderwoman.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671193207/LEGO%20Playground/sunny-faces/wonderwoman_fzusfx.png",
     id: 27
   },
   
