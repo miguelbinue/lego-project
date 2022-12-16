@@ -2,10 +2,10 @@
 <div class="container-item">
     <div v-if="!done">
         <div class="item-title">
-            <h3>{{random}}</h3>
+            <h3>{{randomItem}} <br> + <br> {{randomItem2}}</h3>
             <div class="timer">
                 <button id="done" @click="retoDone()">Done</button>
-                <Countdown/>
+                <Countdown :isActive="isActive"/>
             </div>
         </div>        
         <p>{{task.description}}</p>
@@ -54,7 +54,9 @@ const emit = defineEmits(["getTasks", "hideTask"]);
 
 const props = defineProps({
     task: Object,
+    isActive: Boolean,
 });
+
 
 const retoDone = async () => {
     emit('hideTask');
@@ -114,7 +116,7 @@ const randomItem = randomChallenge[randomIndex];
 const randomIndex2 = Math.floor(Math.random() * randomDetail.length)
 const randomItem2 = randomDetail[randomIndex2];
 
-const random = ref(randomItem + " - " + randomItem2);
+const random = ref(randomItem + " + " + randomItem2);
 console.log(random);
 
 </script>
