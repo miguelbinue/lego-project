@@ -2,6 +2,24 @@
     font-family: 'lego';
     src: url('../../assets/fonts/Legothick.ttf');
 }
+
+@font-face {
+    font-family: 'noto';
+    src: url('../../assets/fonts/NotoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'noto-light';
+    src: url('../../assets/fonts/NotoSans-Thin.ttf');
+}
+
+
+@font-face {
+    font-family: 'noto-bold';
+    src: url('../../assets/fonts/NotoSans-Bold.ttf');
+}
+
+
 :root {
     --colorWhite: #ffffff;
     --colorBlack: #000000;
@@ -293,7 +311,7 @@ ul button{
     padding: 10px 20px;
     background-color: rgb(255, 207, 0);
     color: #222222;
-    font-weight: bold;
+    font-family: 'noto-bold';
 }
 
 nav{
@@ -307,11 +325,12 @@ nav{
 a{
     text-decoration: none;
     color: rgb(255, 207, 0);
-    font-weight: bold;
+    font-family: 'noto';
 }
 
 nav p{
     color: rgb(255, 207, 0);
+    font-family: 'noto';
 }
 
 /* Footer */
@@ -322,6 +341,7 @@ nav p{
     margin-bottom: 0;
     justify-content: center;
     color: rgb(255, 207, 0);
+    font-family: 'noto';
 }
 
 .footer img{

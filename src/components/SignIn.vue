@@ -1,4 +1,7 @@
 <template>
+  
+  <!-- <VideoSignIn class="video-button"/> -->
+
   <div class="container signin-container">
     <!-- <img src="../../assets/images/mecabricks/aquaman.png" alt="aquaman" id="f1"> -->
     <img src="../../assets/images/mecabricks/stormtrooper-rotado.png" alt="stormtrooper" id="f2">
@@ -64,6 +67,7 @@ import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 import PersonalRouter from "./PersonalRouter.vue";
 import { supabase } from "../supabase";
+import VideoSignIn from '../components/VideoSignIn.vue'
 
 // Route Variables
 const route = "/auth/signup";

@@ -159,7 +159,7 @@ const characterArr = [
   },
   {
     title: "Pedro Picapiedra",
-    image: [("../../assets/images/mecabricks/picapiedra.png")],
+    image: "https://res.cloudinary.com/dbmjuz2tz/image/upload/v1671031375/LEGO%20Playground/mecabricks/picapiedra_z49uop.png",
     id: 15
   },
   {

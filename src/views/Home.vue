@@ -2,6 +2,7 @@
   
   <!-- <div v-if="isActive">Hola</div> -->
       <!-- <div class="video"> -->
+
   <VideoDark v-if="!isActive"/> 
   <Video v-if="isActive"/> 
   
