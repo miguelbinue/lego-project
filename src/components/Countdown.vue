@@ -5,14 +5,14 @@
     <div class="time" v-if="timerCountEasy > 0 &&isActive">
         {{ timerCountEasy }}
     </div>
-    <div class="timeDone" v-if="(isActive &&timerCountEasy == 0 ) || (!isActive && timerCountHard == 0)">TIME'S UP! Try Again</div>
+    <div class="timeDone" v-if="(isActive &&timerCountEasy == 0 ) || (!isActive && timerCountHard == 0)">TIME'S UP! <br> Try Again</div>
 </template>
 
 <script setup>
 import { ref, watch } from 'vue';
 
 const timerCountHard = ref(5);
-const timerCountEasy = ref(10);
+const timerCountEasy = ref(200);
 
 const props = defineProps(["isActive"]);
 

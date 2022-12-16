@@ -8,7 +8,6 @@
                 <Countdown :isActive="isActive"/>
             </div>
         </div>        
-        <p>{{task.description}}</p>
     </div>
     <!-- <div v-else class="tachado">
         <div class="item-title">
