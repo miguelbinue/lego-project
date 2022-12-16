@@ -444,8 +444,9 @@ video{
     color: white;
     text-align: center;
     font-weight: bold;
-    height: 80px;
-    width: 100px;
+    height: 90px;
+    width: 120px;
+    font-size: 30px;
 }
 
 .modify-task button{
@@ -467,6 +468,25 @@ video{
     color: black;
     text-align: center;
     font-weight: bold;
+}
+
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 130px;
+}
+
+.time{
+    font-size: 135px;
+    font-family: 'lego';
+}
+
+.timeDone{
+    font-size: 50px;
+    color: rgb(193 36 36);
+    font-weight: bold;
+    margin-left: 15px;
 }
 
 
