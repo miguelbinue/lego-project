@@ -15,7 +15,7 @@
         data() {
             // isHard: true;
             return {
-                timerCountHard: 15,
+                timerCountHard: 150,
                 timerCountEasy: 10,
             }
         },

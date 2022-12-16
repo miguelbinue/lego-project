@@ -137,7 +137,7 @@ body{
 }
 
 .content-box {
-    padding: 50px 90px;
+    padding: 0px 90px;
     border-radius: 60px;
     display: flex;
     position: relative;
@@ -227,7 +227,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 52px;
+    margin-top: 103px;
 }
 
 .form-sign-in {
@@ -235,7 +235,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 75px;
+    margin-top: 127px;
 }
 
 .form-sign-in p{
@@ -399,11 +399,9 @@ video{
     justify-content: space-between;
     flex-direction: column;
 }
-.item-title button{
-    height: 30px;
-}
+
 .item-title h3{
-    font-size: 30px;
+    font-size: 50px;
     margin: 0;
 }
 
@@ -420,6 +418,8 @@ video{
     color: white;
     text-align: center;
     font-weight: bold;
+    height: 80px;
+    width: 100px;
 }
 
 .modify-task button{
@@ -445,6 +445,10 @@ video{
 
 
 /* New Task */
+
+#newTask img{
+    width: 210px;
+}
 
 #pantallaCentral{
     width: 100%;
@@ -504,26 +508,31 @@ video{
     color: rgb(0, 0, 0);
 }
 .new-task-input {
-    padding-bottom: 60px;
-    /* margin-left: 15%; */
+    /* padding-bottom: 60px; */
+    display: flex;
+    justify-content: center;
 }
 .new-task-input button {
     border-radius: 10px;
     border: none;
-    padding: 15px 50px;
+    padding: 0 50px;
     background-color: rgb(255, 120, 120);
     color: white;
     font-weight: bold;
-    margin: 40px 20px 10px 20px;
-    font-size: 20px;
+    margin: 55px 20px 10px 20px;
+    font-size: 50px;
 }
 
-/* #newTask{
-    background-color: #cfcfcf;
-    height: 419px;
-    width: 743px;
-    margin-top: 10.5%;
-} */
+.new-task-input button:first-child{
+    font-size: 30px;
+    width: 140px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #519d94;
+}
+
 
 #newTask {
     background-color: #222222;
@@ -531,7 +540,7 @@ video{
     width: 743px;
     position: absolute;
     top: 30.5%;
-  }
+}
 
 .dropbtn {
     background-color: #4CAF50;
@@ -745,9 +754,27 @@ video{
         height: 820px;
     }
 
+    /* NEW TASK */
     #newTask{
         height: 320px;
         width: 568px;
+    }
+    #newTask img{
+        width: 165px;
+    }
+
+    .new-task-input button{
+        margin: 40px 20px 10px 20px;
+        font-size: 45px;
+    }
+    .new-task-input button:first-child{
+        width: 120px;
+        height: 90px;
+        font-size: 25px;
+    }
+
+    .container-item{
+        width: 48%;
     }
 
     nav{
@@ -804,7 +831,7 @@ video{
     }
 
     .form-sign-up{
-        margin-top: 69px;
+        margin-top: 121px;
     }
 
     .signup .form-input{
